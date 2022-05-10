@@ -2,7 +2,7 @@ $(window).ready(function () {
     var swiper = new Swiper(".section3--swiper", {
         scrollable:false,
         slidesPerView: "auto",
-        
+        centeredSlides: true,
         spaceBetween: 20,
         pagination: {
             el: ".swiper-pagination",
@@ -12,6 +12,11 @@ $(window).ready(function () {
           el: ".swiper-scrollbar",
           draggable: true,
           dragSize:212,
+        },
+        breakpoints:{
+            767:{
+                centeredSlides: false,
+            }
         }
       });
     const s1slideLeftBtn = $("#s1slideLeftBtn")
