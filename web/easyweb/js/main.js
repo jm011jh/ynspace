@@ -19,12 +19,14 @@ $(window).ready(function () {
             }
         }
       });
+    const bgContainer = $("#bgContainer")
     const s1slideLeftBtn = $("#s1slideLeftBtn")
     const s1slideRightBtn = $("#s1slideRightBtn")
     const s2circleText = $("#s2circleText")
     const s1textBox = $("#s1textBox")
     const s1slideBox = $("#s1slideBox")
     const section2 = $("#section2")
+    const section3 = $("#section3")
     const s2textBox = $("#s2textBox")
     var s2textBoxTop = s2textBox.offset().top
     const s2circleBox = $("#s2circleBox")
@@ -108,4 +110,16 @@ $(window).ready(function () {
         ease: "none",
         repeat: -1,
     })
+    // gsap.set(bgContainer,{
+    //     opacity:1
+    // })
+    // gsap.to(bgContainer,{
+    //     opacity:0,
+    //     scrollTrigger:{
+    //         trigger:section2,
+    //         start:"50% top",
+    //         end:"70% top",
+    //         scrub:0.3
+    //     }
+    // })
 })
