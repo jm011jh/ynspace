@@ -1,0 +1,136 @@
+<!--@layout(/layout/basic/layout.html)-->
+<style>
+    *{margin: 0;padding: 0;box-sizing: border-box;}
+    .about--container{width: 100%;max-width: 1280px;margin: auto;padding-top: 130px;}
+    .uniform--container{width: 100%;display: flex;justify-content: flex-end;}
+    .uniform--container span{color: #8b8b8b;}
+    .uniform--container span.uniform--now{color: #ff7f30;letter-spacing: -0.35px;}
+    .uniform--gt{margin: 0 4px 0 8px;}
+
+    .about--section1{margin-top: 140px;position: relative;text-align: center;}
+    .about--section1-bg{position: absolute;width: 100%;height: 100%;display: flex;flex-direction: column;justify-content: flex-end;}
+    .about--section1-bg img{width: 100%;}
+    .about--section1-container{padding:0 60px;position: relative;}
+    .about--section1-text1{margin-bottom: 30px;font-size: 20px;font-weight: 600;line-height: 1;letter-spacing: -0.3px;}
+    .about--section1-text2{margin-bottom: 68px;font-size: 120px;font-weight: 500;font-family: 'Playfair Display' !important;}
+    .about--section1-text2 p{display: flex;justify-content: center;}
+    .about--section1-text2 p span{display: block;line-height: 1;}
+    .about--section1-text2 p:nth-child(1){font-style: italic;}
+    .about--section1-text2 p:nth-child(3){font-style: italic;}
+    .about--section1-text3{margin-bottom: 24px;font-size: 20px;font-weight: 600;letter-spacing: -0.3px;}
+    .about--section1-text4{margin-bottom:120px;font-size: 16px;font-weight: 400;letter-spacing: -0.3px;}
+
+    .about--section2{padding: 0 60px;margin-top: 180px;}
+    .about--section2-textBox{width: 100%;max-width: 1192px;display: flex;justify-content: space-between;}
+    .about--section2-textBox p{width: 50%;word-break: keep-all;}
+    .about--section2-textBox p:nth-child(1){max-width: 495px;font-size: 32px;line-height: 1.3;font-weight: 600;}
+    .about--section2-textBox p:nth-child(2){max-width: 560px;font-size: 16px;line-height: 1.66;letter-spacing: -0.3px;}
+	
+    .about--section3 .swiper-slide{width:35%;}
+    .about--section3 .slide-image img{width:100%;display:block;}
+    .about--section3 .swiper-scrollbar{max-width:1280px;width:100%;margin:40px auto 0;}
+
+    .aboout--section4{margin-top: 140px;}
+    .about--section4-text{text-align: center;}
+    .about--section4-text p{line-height: 1;}
+    .about--section4-text p:nth-child(1){margin-bottom: 24px;font-size: 20px;font-weight: 600;}
+    .about--section4-text p:nth-child(2){font-size: 48px;font-weight: 600;font-family: 'Playfair Display' !important;}
+</style>
+<div class="about--wrap">
+    <div class="uniform--container about--container">
+            <a href="/"><span>Home</span></a>
+            <span class="uniform--gt">&gt;</span>
+            <span class="uniform--now">연남스페이스</span>
+    </div>
+    <div class="about--section1">
+            <div class="about--section1-bg">
+                <img src="/web/easyweb/image/about_01_bg.png" alt="">
+            </div>
+            <div class="about--section1-container">
+                <div class="about--section1-text1"><p>#연남스페이스 소개</p></div>
+                <div class="about--section1-text2">
+                    <p><span>About&nbsp;&nbsp;</span></p>
+                    <p><span>Yeonnam</span></p>
+                    <p><span>&nbsp;&nbsp;Space</span></p>
+                </div>
+                <div class="about--section1-text3"><p>연남동 문화 중심의 소극장으로 자리잡고 있습니다.</p></div>
+                <div class="about--section1-text4"><p>연남동의 새로운 문화트랜드 중심지 연트럴파크와 인접한 공연 문화 콘텐츠를<br>온몸으로 느낄 수 있는 새로운 공간 연남스페이스</p></div>
+                <div class="about--section1-scroll"><img src="/web/easyweb/image/icon_scroll.png" alt=""></div>
+            </div>
+    </div>
+    <div class="about--section2 about--container">
+        <div class="about--section2-textBox">
+            <p>30년 경력의 기술감독님께서 대관 작업 여러분께 최고의 만족을 드릴 것입니다.</p>
+            <p>좌석수는 1층과 1층 계단석 약 130석과 2층 라운지 석 20명 총 150명의 좌석이 준비되어있고 스텐딩은 200~250명, 2층 라운지석은 대관 사용자 분들이 특별하게 사용하실 수 있습니다. 기본적인 음향 시설과 조명시설, 4K 팬틸트 카메라로 라이브스트리밍, 8000안시 레이져 프로젝터로 스크린을 사용하는 모든 것이 포함되어 있습니다.</p>
+        </div>
+    </div>
+    <div class="about--section3">
+        <div class="swiper about--section3-swiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                  <div class="slide-image"><img src="/web/easyweb/image/about_slide1.png" alt=""></div>
+              </div>
+              <div class="swiper-slide">
+                  <div class="slide-image"><img src="/web/easyweb/image/about_slide2.png" alt=""></div>
+              </div>
+              <div class="swiper-slide">
+                  <div class="slide-image"><img src="/web/easyweb/image/about_slide3.png" alt=""></div>
+              </div>
+              <div class="swiper-slide">
+                  <div class="slide-image"><img src="/web/easyweb/image/about_slide4.png" alt=""></div>
+              </div>
+            </div>
+            </div>
+            <div class="swiper-scrollbar"></div>
+          </div>
+    </div>
+    <div class="about--section4 about--container">
+        <div class="about--section4-text">
+            <p>연남스페이스 위치 안내</p>
+            <p>Location</p>
+        </div>
+        <div class="about--section4-map-api"></div>
+        <div class="about--section4--map-link">
+            <div class="about--section4--naver"><a href="">
+                <p>네이버 지도보기</p>
+                <div class="about--section4-arrow">
+                    <span></span>
+                    <span></span>
+                </div>
+            </a></div>
+            <div class="about--section4--kakao"><a href="">
+                <p>카카오 지도보기</p>
+                <div class="about--section4-arrow">
+                    <span></span>
+                    <span></span>
+                </div>
+            </a></div>
+        </div>
+    </div>
+</div>
+<script>
+setTimeout(()=>{
+	$(".header--wrap").removeClass("white")
+	$(".header--wrap").addClass("black")
+})
+    var swiper = new Swiper(".about--section3-swiper", {
+        scrollable:false,
+        slidesPerView: "auto",
+        centeredSlides: false,
+        spaceBetween: 20,
+        pagination: {
+            el: ".swiper-pagination",
+            type: "fraction",
+          },
+        scrollbar: {
+          el: ".swiper-scrollbar",
+          draggable: true,
+          dragSize:212,
+        },
+        breakpoints:{
+            767:{
+                centeredSlides: false,
+            }
+        }
+      });
+</script>
