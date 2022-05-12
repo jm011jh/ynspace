@@ -1,5 +1,5 @@
 @import url("/web/easyweb/css/font.css");
-*{font-family: 'Spoqa Han Sans Neo', 'AppleSD';}
+body{font-family: 'Spoqa Han Sans Neo', 'AppleSD';}
 .font2{font-family: 'Playfair Display', serif;}
 ::-webkit-scrollbar{display: none;}
 /* 
