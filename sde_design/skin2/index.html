@@ -1,269 +1,262 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>YEON NAM</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300&display=swap" rel="stylesheet">
-    <link rel="stylesheet"href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
-    <link rel="stylesheet" href="/web/easyweb/css/layout.css">
-    <link rel="stylesheet" href="/web/easyweb/css/main.css">
-</head>
-<body>
-    <div id="bgContainer" class="bg-container">
-        <div class="bg-container--wrap">
-            <div class="bg-container--list bg-container--list1 active"></div>
-            <div class="bg-container--list bg-container--list2"></div>
-            <div class="bg-container--list bg-container--list3"></div>
-            <div class="bg-container--list bg-container--list4"></div>
+<!--@layout(/layout/basic/main.html)-->
+<div id="bgContainer" class="bg-container">
+    <div class="bg-container--wrap">
+        <div class="bg-container--list bg-container--list1 active"></div>
+        <div class="bg-container--list bg-container--list2"></div>
+        <div class="bg-container--list bg-container--list3"></div>
+        <div class="bg-container--list bg-container--list4"></div>
+    </div>
+</div>
+<div class="main-container">
+    <div class="section1">
+        <div class="section1--contents">
+            <div id="s1textBox" class="section1--text w">
+                <p>연남스페이스</p>
+                <p>Yeonnam Space, a new space that you can feel with your whole body<br class="over480">It is located as a small theater at the center of Yeonnam-dong culture.</p>
+            </div>
+            <div id="s1slideBox" class="section1--slide w">
+                <div class="section1--slide-btn-wrap">
+                    <div id="s1slideLeftBtn" class="section1--slide-left section1--slide-button" role="button">
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <div id="s1slideRightBtn" class="section1--slide-right section1--slide-button" role="button">
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+                <div class="section1--slide-thumb-wrap">
+                    <div class="section1--slide-thumb-list section1--slide-thumb-list1 active"></div>
+                    <div class="section1--slide-thumb-list section1--slide-thumb-list2"></div>
+                    <div class="section1--slide-thumb-list section1--slide-thumb-list3"></div>
+                    <div class="section1--slide-thumb-list section1--slide-thumb-list4"></div>
+                </div>
+            </div>
         </div>
     </div>
-    <div class="main-container">
-        <div class="section1">
-            <div class="section1--contents">
-                <div id="s1textBox" class="section1--text w">
-                    <p>연남스페이스</p>
-                    <p>Yeonnam Space, a new space that you can feel with your whole body<br class="over480">It is located as a small theater at the center of Yeonnam-dong culture.</p>
-                </div>
-                <div id="s1slideBox" class="section1--slide w">
-                    <div class="section1--slide-btn-wrap">
-                        <div id="s1slideLeftBtn" class="section1--slide-left section1--slide-button" role="button">
-                            <span></span>
-                            <span></span>
-                        </div>
-                        <div id="s1slideRightBtn" class="section1--slide-right section1--slide-button" role="button">
-                            <span></span>
-                            <span></span>
+    <div id="section2" class="section2">
+        <div class="section2--wrapper">
+            <div class="section2--container">
+                <div id="s2textBox" class="section2--text-wrap">
+                    <div class="section2--text-row section2--text-row1"><p>온몸으로</p></div>
+                    <div class="section2--text-row section2--text-row2">
+                        <p>느낄 수 있는</p>
+                        <div class="section2--small-text">
+                            <p class=" section2--small">연남스페이스는 연남동 문화 중심의<br>소극장으로 자리잡고 있습니다.</p>
                         </div>
                     </div>
-                    <div class="section1--slide-thumb-wrap">
-                        <div class="section1--slide-thumb-list section1--slide-thumb-list1 active"></div>
-                        <div class="section1--slide-thumb-list section1--slide-thumb-list2"></div>
-                        <div class="section1--slide-thumb-list section1--slide-thumb-list3"></div>
-                        <div class="section1--slide-thumb-list section1--slide-thumb-list4"></div>
+                    <div class="section2--text-row section2--text-row3">
+                        <p>새로운 공간</p>
+                        <p class="section2--small section2--small-mob">연남스페이스는 연남동 문화 중심의<br>소극장으로 자리잡고 있습니다.</p>
                     </div>
                 </div>
-            </div>
-        </div>
-        <div id="section2" class="section2">
-            <div class="section2--wrapper">
-                <div class="section2--container">
-                    <div id="s2textBox" class="section2--text-wrap">
-                        <div class="section2--text-row section2--text-row1"><p>온몸으로</p></div>
-                        <div class="section2--text-row section2--text-row2">
-                            <p>느낄 수 있는</p>
-                            <div class="section2--small-text">
-                                <p class=" section2--small">연남스페이스는 연남동 문화 중심의<br>소극장으로 자리잡고 있습니다.</p>
-                            </div>
-                        </div>
-                        <div class="section2--text-row section2--text-row3">
-                            <p>새로운 공간</p>
-                            <p class="section2--small section2--small-mob">연남스페이스는 연남동 문화 중심의<br>소극장으로 자리잡고 있습니다.</p>
-                        </div>
+                <div id="s2circleBox" class="section2--circle-wrap">
+                    <div id="s2circleText" class="section2--circle-text">
+                        <img src="/web/easyweb/image/main_s2_circle_text.png" alt="">
                     </div>
-                    <div id="s2circleBox" class="section2--circle-wrap">
-                        <div id="s2circleText" class="section2--circle-text">
-                            <img src="/web/easyweb/image/main_s2_circle_text.png" alt="">
-                        </div>
-                        <div class="section2--circle-arrow">
-                            <span></span>
-                            <span></span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div id="section3" class="section3">
-            <div class="section3--bg"><span></span><span></span><span></span></div>
-            <div class="section3--wrap">
-                <div class="section3--container">
-                    <div class="section3--contents">
-                        <div class="section3--text">
-                            <p>#공연정보</p>
-                            <p class="font2">Performance<br>information</p>
-                            <p>연남스페이스에서 진행하고있는<br>공연정보입니다.</p>
-                            <div class="section3--view-detail">
-                                <a href="">
-                                    <div class="section3--view-detail-arrow"><span></span><span></span></div>
-                                    <div class="section3--view-detail-text"><p class="font2">View detail</p></div>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="swiper section3--swiper">
-                            <div class="swiper-wrapper">
-                              <div class="swiper-slide">
-                                  <div class="slide-image"></div>
-                                  <div class="slide-title">
-                                      <p>슬라이드타이틀</p>
-                                  </div>
-                                  <div class="slide-date">
-                                      <p>일시 :&nbsp;</p>
-                                      <p>2022:01.01 ~ 2022:01.10</p>
-                                  </div>
-                              </div>
-                              <div class="swiper-slide">
-                                  <div class="slide-image"></div>
-                                  <div class="slide-title">
-                                      <p>슬라이드타이틀</p>
-                                  </div>
-                                  <div class="slide-date">
-                                      <p>일시 :&nbsp;</p>
-                                      <p>2022:01.01 ~ 2022:01.10</p>
-                                  </div>
-                              </div>
-                              <div class="swiper-slide">
-                                  <div class="slide-image"></div>
-                                  <div class="slide-title">
-                                      <p>슬라이드타이틀</p>
-                                  </div>
-                                  <div class="slide-date">
-                                      <p>일시 :&nbsp;</p>
-                                      <p>2022:01.01 ~ 2022:01.10</p>
-                                  </div>
-                              </div>
-                              <div class="swiper-slide">
-                                  <div class="slide-image"></div>
-                                  <div class="slide-title">
-                                      <p>슬라이드타이틀</p>
-                                  </div>
-                                  <div class="slide-date">
-                                      <p>일시 :&nbsp;</p>
-                                      <p>2022:01.01 ~ 2022:01.10</p>
-                                  </div>
-                              </div>
-                            </div>
-                            <div class="swiper-scrollbar"></div>
-                          </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="section4">
-            <div class="section4--bg"></div>
-            <div class="section4--wrap">
-                <div class="section4--container">
-                    <div class="section4-text">
-                        <p>#연남스페이스의 멋진 내부공간</p>
-                        <p class="font2">Matterport VR</p>
-                    </div>
-                    <div class="section4--matterport">
-                        <a href="">
-                            <img src="/web/easyweb/image/main_s4_matterport.png" alt="">
-                            <div class="section4--matterport-text">
-                                <p class="font2">Play</p>
-                                <span class="line"></span>
-                                <div class="section4--matterport-play">
-                                    <div class="playIcon-box"><span></span></div>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="section5">
-            <div class="section5--wrap">
-                <div class="section5--container">
-                    <div class="section5--banner">this is bnr section</div>
-                    <div class="section5--news">
-                        <div class="section5--news-head">
-                            <p class="font2">News</p>
-                            <a href="">
-                                <div class="w">
-                                    <p>View More</p>
-                                </div>
-                                <div class="w">
-                                    <div class="plus-icon"><span></span><span></span></div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="section5--news-body">
-                            <div class="section5--news-list">
-                                <a href="">
-                                    <div class="section5--news-info">
-                                        <div class="section5--news-num">
-                                            <p class="section5--news-date">2022.01.01</p>
-                                            <p class="section5--news-order">01</p>
-                                        </div>
-                                        <div class="section5--news-text">
-                                            <div class="section5--news-title">
-                                                <div class="section5--news-notice"><p>공지</p></div>
-                                                <div class="section5--news-notice-title"><p>공지사항제목</p></div>
-                                            </div>
-                                            <div class="section5--news-exp"><p>공지사항내용간략</p></div>
-                                        </div>
-                                    </div>
-                                    <div class="section5--news-circle"><span></span><span></span></div>
-                                </a>
-                            </div>
-                            <div class="section5--news-list">
-                                <a href="">
-                                    <div class="section5--news-info">
-                                        <div class="section5--news-num">
-                                            <p class="section5--news-date">2022.01.01</p>
-                                            <p class="section5--news-order">01</p>
-                                        </div>
-                                        <div class="section5--news-text">
-                                            <div class="section5--news-title">
-                                                <div class="section5--news-notice"><p>공지</p></div>
-                                                <div class="section5--news-notice-title"><p>공지사항제목</p></div>
-                                            </div>
-                                            <div class="section5--news-exp"><p>공지사항내용간략</p></div>
-                                        </div>
-                                    </div>
-                                    <div class="section5--news-circle"><span></span><span></span></div>
-                                </a>
-                            </div>
-                            <div class="section5--news-list">
-                                <a href="">
-                                    <div class="section5--news-info">
-                                        <div class="section5--news-num">
-                                            <p class="section5--news-date">2022.01.01</p>
-                                            <p class="section5--news-order">01</p>
-                                        </div>
-                                        <div class="section5--news-text">
-                                            <div class="section5--news-title">
-                                                <div class="section5--news-notice"><p>공지</p></div>
-                                                <div class="section5--news-notice-title"><p>공지사항제목</p></div>
-                                            </div>
-                                            <div class="section5--news-exp"><p>공지사항내용간략</p></div>
-                                        </div>
-                                    </div>
-                                    <div class="section5--news-circle"><span></span><span></span></div>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="section6">
-            <div class="section6--wrap">
-                <div class="section6--container">
-                    <div class="section6--text">
-                        <p>연남스페이스는 연남동 문화 중심의 <br>소극장으로 자리잡고 있습니다.</p>
-                    </div>
-                    <div class="section6--download">
-                        <a href="">
-                            <div class="section6--download-icon"><img src="/web/easyweb/image/icon_download.png" alt=""></div>
-                            <div class="section6--download-text"><p>대관신청서 다운로드</p></div>
-                        </a>
+                    <div class="section2--circle-arrow">
+                        <span></span>
+                        <span></span>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <div id="header"></div>
-    <div id="footer"></div>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
-    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
-    <script src="/web/easyweb/js/layout.js"></script>
-    <script src="/web/easyweb/js/main.js"></script>
-</body>
-</html>
+
+    
+    <div id="section3" class="section3">
+<div class="section3--bg"><span></span><span></span><span></span></div>
+<div class="section3--wrap">
+    <div class="section3--container">
+        <div class="section3--contents">
+            <div class="section3--text">
+                <p>#공연정보</p>
+                <p class="font2">Performance<br>information</p>
+                <p>연남스페이스에서 진행하고있는<br>공연정보입니다.</p>
+                <div class="section3--view-detail">
+                    <a href="">
+                        <div class="section3--view-detail-arrow"><span></span><span></span></div>
+                        <div class="section3--view-detail-text">
+                            <p class="font2">View detail</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="swiper section3--swiper" module="product_listmain_1">
+                        <!--
+        $count = 5
+        $basket_result = /product/add_basket.html
+        $basket_option = /product/basket_option.html
+    -->
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide" id="anchorBoxId_{$product_no}">
+                        <a href="/product/detail.html{$param}">
+                            <div class="slide-image" style="background-image: url({$image_medium});" id="{$image_medium_id}"></div>
+                            <div class="slide-title">
+                                <p>{$product_name_title}</p>
+                            </div>
+                            <div class="slide-date">
+                                <p></p>
+                                <p>일시 :&nbsp;</p>
+                                <p>{$expiration_date}</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="swiper-slide" id="anchorBoxId_{$product_no}">
+                        <a href="/product/detail.html{$param}">
+                            <div class="slide-image" style="background-image: url({$image_medium});" id="{$image_medium_id}"></div>
+                            <div class="slide-title">
+                                <p>{$product_name_title}</p>
+                            </div>
+                            <div class="slide-date">
+                                <p></p>
+                                <p>일시 :&nbsp;</p>
+                                <p>{$expiration_date}</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="swiper-scrollbar"></div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+    
+    
+    <div class="section4">
+        <div class="section4--bg"></div>
+        <div class="section4--wrap">
+            <div class="section4--container">
+                <div class="section4-text">
+                    <p>#연남스페이스의 멋진 내부공간</p>
+                    <p class="font2">Matterport VR</p>
+                </div>
+                <div class="section4--matterport">
+                    <a href="">
+                        <img src="/web/easyweb/image/main_s4_matterport.png" alt="">
+                        <div class="section4--matterport-text">
+                            <p class="font2">Play</p>
+                            <span class="line"></span>
+                            <div class="section4--matterport-play">
+                                <div class="playIcon-box"><span></span></div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+   
+
+
+
+<div class="section5">
+<div class="section5--wrap">
+    <div class="section5--container">
+        <div class="section5--banner">this is bnr section</div>
+        <div class="section5--news">
+            <div class="section5--news-head">
+                <p class="font2">News</p>
+                <a href="">
+                    <div class="w">
+                        <p>View More</p>
+                    </div>
+                    <div class="w">
+                        <div class="plus-icon"><span></span><span></span></div>
+                    </div>
+                </a>
+            </div>
+            <div class="section5--news-body" module="board_list_1">
+                                    <!--
+                $count = 3
+                $main_list = yes
+                $subject_cut = 25
+                $main_list_reply_view = no
+                 -->
+                <div class="section5--news-list">
+                    <a href="{$link_board_detail}">
+                        <div class="section5--news-info">
+                            <div class="section5--news-num">
+                                <p class="section5--news-date">{$write_date}</p>
+                                <p class="section5--news-order">01</p>
+                            </div>
+                            <div class="section5--news-text">
+                                <div class="section5--news-title">
+                                    <div class="section5--news-notice">
+                                        <p>공지</p>
+                                    </div>
+                                    <div class="section5--news-notice-title">
+                                        <p>{$subject}</p>
+                                    </div>
+                                </div>
+                                <div class="section5--news-exp">
+                                    <p>공지사항내용간략</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="section5--news-circle"><span></span><span></span></div>
+                    </a>
+                </div>
+                <div class="section5--news-list">
+                    <a href="{$link_board_detail}">
+                        <div class="section5--news-info">
+                            <div class="section5--news-num">
+                                <p class="section5--news-date">{$write_date}</p>
+                                <p class="section5--news-order">01</p>
+                            </div>
+                            <div class="section5--news-text">
+                                <div class="section5--news-title">
+                                    <div class="section5--news-notice">
+                                        <p>공지</p>
+                                    </div>
+                                    <div class="section5--news-notice-title">
+                                        <p>{$subject}</p>
+                                    </div>
+                                </div>
+                                <div class="section5--news-exp">
+                                    <p>공지사항내용간략</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="section5--news-circle"><span></span><span></span></div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+    <div class="section6">
+        <div class="section6--wrap">
+            <div class="section6--container">
+                <div class="section6--text">
+                    <p>연남스페이스는 연남동 문화 중심의 <br>소극장으로 자리잡고 있습니다.</p>
+                </div>
+                <div class="section6--download">
+                    <a href="">
+                        <div class="section6--download-icon"><img src="/web/easyweb/image/icon_download.png" alt=""></div>
+                        <div class="section6--download-text"><p>대관신청서 다운로드</p></div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+setTimeout(()=>{
+$(".header--wrap").removeClass("black")
+$(".header--wrap").addClass("white")
+$(".section5--news-list").each(function(){
+    var thisIdx = String($(this).index()+1);
+    insertIdx = "0" +thisIdx;
+    $(this).find(".section5--news-order").text(insertIdx)
+})
+$(".section5--news-date").each(function(){
+    var thisText = $(this).text();
+    var cutText = thisText.substr(0,10);
+    $(this).text(cutText)
+    
+})
+})
+</script>

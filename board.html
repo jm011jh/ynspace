@@ -1,0 +1,116 @@
+<div class="board" module="board_listpackage_1">
+    <h3 module="board_title_1">{$home_title}</h3>
+    <div class="ec-base-table typeList gLine">
+        <table border="1" summary="">
+            <caption>공지사항 목록</caption>
+            <colgroup>
+                <col style="width:auto;" />
+                <col style="width:100px;" />
+            </colgroup>
+            <thead module="board_listheader_1" class="blind">
+                <tr>
+                    <th scope="col">제목</th>
+                    <th scope="col">작성일</th>
+                </tr>
+            </thead>
+            <tbody module="board_list_1" class="top">
+                <!--
+                $count = 
+                $main_list = yes
+                $subject_cut = 25
+                $main_list_reply_view = no
+             -->
+                <tr>
+                    <td class="title"><a href="{$link_board_detail}">{$subject}</a>
+                        {$icon_new}{$icon_hit}{$icon_file}{$comment_count}</td>
+                    <td class="right {$date_display|display}">{$write_date}</td>
+                </tr>
+                <tr>
+                    <td class="title"><a href="{$link_board_detail}">{$subject}</a>
+                        {$icon_new}{$icon_hit}{$icon_file}{$comment_count}</td>
+                    <td class="right {$date_display|display}">{$write_date}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <a href="/board/free/list.html?board_no=1" class="btnLink">더보기</a>
+</div>
+
+
+
+<div class="section5">
+    <div class="section5--wrap">
+        <div class="section5--container">
+            <div class="section5--banner">this is bnr section</div>
+            <div class="section5--news">
+                <div class="section5--news-head">
+                    <p class="font2">News</p>
+                    <a href="">
+                        <div class="w">
+                            <p>View More</p>
+                        </div>
+                        <div class="w">
+                            <div class="plus-icon"><span></span><span></span></div>
+                        </div>
+                    </a>
+                </div>
+                <div class="section5--news-body" module="board_list_1">
+                    <!--
+                    $count = 3
+                    $main_list = yes
+                    $subject_cut = 25
+                    $main_list_reply_view = no
+                    -->
+                    <div class="section5--news-list">
+                        <a href="{$link_board_detail}">
+                            <div class="section5--news-info">
+                                <div class="section5--news-num">
+                                    <p class="section5--news-date">2022.01.01</p>
+                                    <p class="section5--news-order">01</p>
+                                </div>
+                                <div class="section5--news-text">
+                                    <div class="section5--news-title">
+                                        <div class="section5--news-notice">
+                                            <p>공지</p>
+                                        </div>
+                                        <div class="section5--news-notice-title">
+                                            <p>{$subject}</p>
+                                        </div>
+                                    </div>
+                                    <div class="section5--news-exp">
+                                        <p>공지사항내용간략</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="section5--news-circle"><span></span><span></span></div>
+                        </a>
+                    </div>
+                    <div class="section5--news-list">
+                        <a href="{$link_board_detail}">
+                            <div class="section5--news-info">
+                                <div class="section5--news-num">
+                                    <p class="section5--news-date">2022.01.01</p>
+                                    <p class="section5--news-order">01</p>
+                                </div>
+                                <div class="section5--news-text">
+                                    <div class="section5--news-title">
+                                        <div class="section5--news-notice">
+                                            <p>공지</p>
+                                        </div>
+                                        <div class="section5--news-notice-title">
+                                            <p>{$subject}</p>
+                                        </div>
+                                    </div>
+                                    <div class="section5--news-exp">
+                                        <p>공지사항내용간략</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="section5--news-circle"><span></span><span></span></div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
