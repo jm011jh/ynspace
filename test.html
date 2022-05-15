@@ -1,0 +1,112 @@
+<div class="ec-base-table typeWrite">
+        <div class="{$display_use_id|display}">
+            <div scope="row">아이디 <img src="//img.echosting.cafe24.com/skin/base/common/ico_required_blue.gif" alt="필수" /></div>
+            <div>{$form.member_id} <span id="{$idMsg_id}"></span> (영문소문자/숫자, 4~16자)</div>
+        </div>
+        <div>
+            <div scope="row">비밀번호 <img src="//img.echosting.cafe24.com/skin/base/common/ico_required_blue.gif" alt="필수" /></div>
+            <div>
+                <div class="eTooltip">
+                    {$form.passwd}
+                    <div class="ec-base-tooltip typeUpper">
+                        <div class="content">
+                            <strong class="txtWarn">※ {$passwd_terms}</strong>
+                            <ul class="ec-base-help typeDash gBlank10 txtWarn">
+                                {$passwd_chk_info}
+                            </ul>
+                        </div>
+                        <a href="#none" class="btnClose"><img src="//img.echosting.cafe24.com/skin/base/common/btn_close_tip.gif" alt="닫기" /></a>
+                        <span class="edge"></span>
+                    </div>
+                </div>
+                {$passwd_type_desc}
+            </div>
+        </div>
+        <div>
+            <div scope="row">비밀번호 확인 <img src="//img.echosting.cafe24.com/skin/base/common/ico_required_blue.gif" alt="필수" /></div>
+            <div>{$form.user_passwd_confirm} <span id="{$pwConfirmMsg_id}"></span> </div>
+        </div>
+        <div class="{$display_hint|display}">
+            <div scope="row">비밀번호 확인 질문 <img src="//img.echosting.cafe24.com/skin/base/common/ico_required_blue.gif" alt="필수" /></div>
+            <div>{$form.hint}</div>
+        </div>
+        <div class="{$display_hint_answer|display}">
+            <div scope="row">비밀번호 확인 답변 <img src="//img.echosting.cafe24.com/skin/base/common/ico_required_blue.gif" alt="필수" /></div>
+            <div>{$form.hint_answer}</div>
+        </div>
+        <div>
+            <div scope="row" id="{$name_title}">이름 <img src="//img.echosting.cafe24.com/skin/base/common/ico_required_blue.gif" alt="필수" /></div>
+            <div>
+                <span id="{$name_contents}">{$form.name}</span>
+                <span id="under14Msg" class="displaynone">14세 미만 사용자는 법정대리인 동의가 필요합니다.</span>
+            </div>
+        </div>
+        <div class="{$display_eng_name|display}">
+            <div scope="row">이름(영문) <img src="//img.echosting.cafe24.com/skin/base/common/ico_required_blue.gif" class="{$display_required_name_en|display}" alt="필수" /></div>
+            <div>{$form.name_en} (이름 - 성 형식으로 입력해 주세요.)</div>
+        </div>
+        <!-- 외국인 회원 정보 -->
+        <div>
+            <div scope="row" id="ssnTitle"></div>
+            <div id="ssnContents"></div>
+        </div><!-- // 외국인 회원 정보 -->
+        <div id="{$companyRow}">
+            <div scope="row">상호명 <img src="//img.echosting.cafe24.com/skin/base/common/ico_required_blue.gif" alt="필수" /></div>
+            <div id="companyName">{$form.cname}</div>
+        </div>
+        <div id="{$companyNoRow}">
+            <div scope="row">사업자번호 <img src="//img.echosting.cafe24.com/skin/base/common/ico_required_blue.gif" alt="필수" /></div>
+            <div id="companySsn">
+                {$form.cssn}
+                <a href="#none" class="btnNormal {$display_cssn_dupl|display}" onclick="{$action_cssn_dupl}">중복확인</a>
+                <span id="{$cssnMsg_id}"></span>
+            </div>
+        </div>
+        <div id="nation">
+            <div>국적 <img src="//img.echosting.cafe24.com/skin/base/common/ico_required_blue.gif" alt="필수" /></div>
+            <div>{$form.citizenship}</div>
+        </div>
+        <div class="{$display_addr|display}">
+            <div scope="row">주소 <img src="//img.echosting.cafe24.com/skin/base/common/ico_required_blue.gif" class="{$display_required_address|display}" alt="필수" /></div>
+            <div>{$form.address}</div>
+        </div>
+        <div class="{$display_phone|display}">
+            <div scope="row">일반전화 <img src="//img.echosting.cafe24.com/skin/base/common/ico_required_blue.gif" class="{$display_required_phone|display}" alt="필수" /></div>
+            <div>{$form.phone}</div>
+        </div>
+        <div class="{$display_mobile|display}">
+            <div scope="row">휴대전화 <img src="//img.echosting.cafe24.com/skin/base/common/ico_required_blue.gif" class="{$display_required_cell|display}" alt="필수" /></div>
+            <div>
+                {$form.mobile}<button type="button" id="{$btn_action_verify_mobile}" class="btnNormal {$display_verify_mobile|display}" onclick="{$action_verify_mobile}">인증번호받기</button>
+                <p class="txtWarn gBlank5 {$bDisplayMobileVerifyInfoDefault|display}" id="{$result_send_verify_mobile_fail}"></p>
+                <ul class="txtInfo gBlank5 {$bDisplayMobileVerifyInfoDefault|display}" id="{$result_send_verify_mobile_success}">
+                    <li>인증번호가 발송되었습니다.</li>
+                    <li>인증번호를 받지 못하셨다면 휴대폰 번호를 확인해 주세요.</li>
+                </ul>
+            </div>
+        </div>
+        <div class="{$display_verify_mobile_confirm|display}" id="{$confirm_verify_mobile}">
+            <div scope="row">인증번호 <img src="//img.echosting.cafe24.com/skin/base/common/ico_required_blue.gif" alt="필수" /></div>
+            <div>
+                <div class="verify">
+                    {$form.verify_sms_number}
+                    <span class="time" id="{$expiryTime}"></span>
+                </div>
+                <button type="button" class="btnNormal" id="{$btn_verify_mobile_confirm}" onclick="{$action_verify_mobile_confirm}">확인</button>
+            </div>
+        </div>
+        <div>
+            <div scope="row">이메일 <img src="//img.echosting.cafe24.com/skin/base/common/ico_required_blue.gif" alt="필수" /></div>
+            <div>{$form.email} <span id="{$emailMsg_id}"></span></div>
+        </div>
+        <div class="{$display_is_lifetime|display}">
+            <div scope="row">평생회원</div>
+            <div>
+                {$form.is_lifetime}
+                <ul class="txtDesc">
+                    <li>평생회원으로 가입하시면 <strong>{$mall_name}</strong> 회원 탈퇴시까지는 휴면회원으로 전환되지 않으며, 고객님의 개인정보가 탈퇴시까지 안전하게 보관됩니다.</li>
+                    <li class="{$display_is_lifetime_benefit|display}">지금 평생회원으로 가입하시면 쿠폰혜택을 드립니다. (쿠폰혜택을 받으신 경우, 3개월간 평생회원을 유지하셔야 합니다.)</li>
+                </ul>
+            </div>
+        </div>
+</div>

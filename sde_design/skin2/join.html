@@ -5,14 +5,45 @@
         <li><a href="/">홈</a></li>
         <li title="현재 위치"><strong>회원 가입</strong></li>
     </ol>
-</div>-->
+</div>
 
 <div class="titleArea">
     <h2>회원 가입</h2>
-</div>
+</div>-->
+<style>
+    .uniform--container{padding:0 60px;;max-width:1400px;margin:auto;width: 100%;display: flex;justify-content: flex-end;padding-top:130px;}
+    .uniform--container span{color: #8b8b8b;}
+    .uniform--container span.uniform--now{color: #ff7f30;letter-spacing: -0.35px;}
+    .uniform--gt{margin: 0 4px 0 8px;}
+    .join--form input{width: 100%;padding: 8px;height: 48px;font-size: 15px;}
+    .join--form select{padding: 8px;height: 48px;font-size: 15px;width: 64px !important;}
+    .join--form .eTooltip{width: 100%;}
+    .join--title{margin-bottom: 40px;font-size: 32px;font-weight: 600;display: flex;}
+    .join--title .keyColor{color: #ff7f30;}
+    .join--form-row{margin-bottom: 28px;}
+    .join--subject{font-size: 16px;font-weight: 600;margin-bottom: 14px;}
+    .pw-again{margin-top: 10px;}
 
+    .join--button-end{margin-top:60px;display: flex;justify-content: space-between;}
+    .join--button-end a{width: calc(50% - 11px);display: block;padding: 26px 0;text-align: center;border: 1px solid #000;font-size: 18px;font-weight: 600;}
+    .join--button-end a:nth-child(2){background-color: #000000;color: #ffffff;}
+
+    .join--agree-title{margin-top: 64px;font-size: 20px;font-weight: 600;padding-bottom: 26px;border-bottom: 2px solid #000;}
+    .xans-member-join .ec-base-box.gStrong{margin: 28px 0;}
+    .ec-base-box.typeThinBg h3 span{color: #ff7f30;}
+
+    .xans-member-join .ec-base-box + .ec-base-box{margin-top:0;}
+    .ec-base-table img{vertical-align: top;}
+    #passwd{background-image: url(/web/easyweb/image/icon_visible.png);background-size: 22px 15px;background-repeat: no-repeat;background-position: calc(100% - 12px) center;}
+</style>
+    <div class="uniform--container">
+            <a href="/"><span>Home</span></a>
+            <span class="uniform--gt">&gt;</span>
+            <span class="uniform--now">회원가입</span>
+    </div>
 <div module="member_join" class="public-box">
-    
+<div class="public-wrap">
+<div class="join--container">
     <!--@css(/css/module/member/join.css)-->
     <!--
         $returnUrl = /member/join_result.html
@@ -25,6 +56,10 @@
         $foreignerSsn3 = 국제운전면허증번호
         $isRuleBasedAddrForm = T
      -->
+    <div class="join--title">
+        <p class="keyColor">Yeonnam Space&nbsp;</p>
+        <p>회원가입</p>
+    </div>
     <div class="ec-base-table typeWrite">
         <table border="1" summary="">
         <caption>회원가입</caption>
@@ -34,15 +69,15 @@
         </colgroup>
         <tbody>
             <tr class="{$display_member_type|display}">
-                <th scope="row">회원구분 <img src="//img.echosting.cafe24.com/skin/base/common/ico_required_blue.gif" alt="필수" /></th>
+                <th scope="row">회원구분 <img src="/web/easyweb/image/icon_important_spot.png" alt="필수" /></th>
                 <td>{$form.member_type}</td>
             </tr>
             <tr id="companyWrap">
-                <th scope="row">사업자구분 <img src="//img.echosting.cafe24.com/skin/base/common/ico_required_blue.gif" alt="필수" /></th>
+                <th scope="row">사업자구분 <img src="/web/easyweb/image/icon_important_spot.png" alt="필수" /></th>
                 <td>{$form.company_type}</td>
             </tr>
             <tr id="authMember">
-                <th scope="row">회원인증 <img src="//img.echosting.cafe24.com/skin/base/common/ico_required_blue.gif" alt="필수" /></th>
+                <th scope="row">회원인증 <img src="/web/easyweb/image/icon_important_spot.png" alt="필수" /></th>
                 <td>
                     <div id="authWrap" style="display:none;">
                         <!-- 개인 회원 인증 -->
@@ -97,128 +132,121 @@
     </div>
 
     <h3 class="{$display_base_column_title|display}">기본정보</h3>
-    <p class="required {$display_base_column_title|display}"><img src="//img.echosting.cafe24.com/skin/base/common/ico_required_blue.gif" alt="필수" /> 필수입력사항</p>
-    <div class="ec-base-table typeWrite">
-        <table border="1" summary="">
-        <caption>회원 기본정보</caption>
-        <colgroup>
-            <col style="width:150px;" />
-            <col style="width:auto;" />
-        </colgroup>
-        <tbody>
-            <tr class="{$display_use_id|display}">
-                <th scope="row">아이디 <img src="//img.echosting.cafe24.com/skin/base/common/ico_required_blue.gif" alt="필수" /></th>
-                <td>{$form.member_id} <span id="{$idMsg_id}"></span> (영문소문자/숫자, 4~16자)</td>
-            </tr>
-            <tr>
-                <th scope="row">비밀번호 <img src="//img.echosting.cafe24.com/skin/base/common/ico_required_blue.gif" alt="필수" /></th>
-                <td>
-                    <div class="eTooltip">
-                        {$form.passwd}
-                        <div class="ec-base-tooltip typeUpper">
-                            <div class="content">
-                                <strong class="txtWarn">※ {$passwd_terms}</strong>
-                                <ul class="ec-base-help typeDash gBlank10 txtWarn">
-                                    {$passwd_chk_info}
-                                </ul>
-                            </div>
-                            <a href="#none" class="btnClose"><img src="//img.echosting.cafe24.com/skin/base/common/btn_close_tip.gif" alt="닫기" /></a>
-                            <span class="edge"></span>
+    <p class="required {$display_base_column_title|display}"><img src="/web/easyweb/image/icon_important_spot.png" alt="필수" /> 필수입력사항</p>
+    <div class="ec-base-table typeWrite join--form">
+        <div class="join--form-row {$display_use_id|display}">
+            <div class="join--subject">아이디 <img src="/web/easyweb/image/icon_important_spot.png" alt="필수" /></div>
+            <div>{$form.member_id} <span id="{$idMsg_id}"></span></div>
+        </div>
+        <div class="join--form-row">
+            <div class="join--subject">비밀번호 <img src="/web/easyweb/image/icon_important_spot.png" alt="필수" /></div>
+            <div>
+                <div class="eTooltip">
+                    {$form.passwd}
+                    <div class="ec-base-tooltip typeUpper">
+                        <div class="content">
+                            <strong class="txtWarn">※ {$passwd_terms}</strong>
+                            <ul class="ec-base-help typeDash gBlank10 txtWarn">
+                                {$passwd_chk_info}
+                            </ul>
                         </div>
+                        <a href="#none" class="btnClose"><img src="//img.echosting.cafe24.com/skin/base/common/btn_close_tip.gif" alt="닫기" /></a>
+                        <span class="edge"></span>
                     </div>
-                    {$passwd_type_desc}
-                </td>
-            </tr>
-            <tr>
-                <th scope="row">비밀번호 확인 <img src="//img.echosting.cafe24.com/skin/base/common/ico_required_blue.gif" alt="필수" /></th>
-                <td>{$form.user_passwd_confirm} <span id="{$pwConfirmMsg_id}"></span> </td>
-            </tr>
-            <tr class="{$display_hint|display}">
-                <th scope="row">비밀번호 확인 질문 <img src="//img.echosting.cafe24.com/skin/base/common/ico_required_blue.gif" alt="필수" /></th>
-                <td>{$form.hint}</td>
-            </tr>
-            <tr class="{$display_hint_answer|display}">
-                <th scope="row">비밀번호 확인 답변 <img src="//img.echosting.cafe24.com/skin/base/common/ico_required_blue.gif" alt="필수" /></th>
-                <td>{$form.hint_answer}</td>
-            </tr>
-            <tr>
-                <th scope="row" id="{$name_title}">이름 <img src="//img.echosting.cafe24.com/skin/base/common/ico_required_blue.gif" alt="필수" /></th>
-                <td>
-                    <span id="{$name_contents}">{$form.name}</span>
-                    <span id="under14Msg" class="displaynone">14세 미만 사용자는 법정대리인 동의가 필요합니다.</span>
-                </td>
-            </tr>
-            <tr class="{$display_eng_name|display}">
-                <th scope="row">이름(영문) <img src="//img.echosting.cafe24.com/skin/base/common/ico_required_blue.gif" class="{$display_required_name_en|display}" alt="필수" /></th>
-                <td>{$form.name_en} (이름 - 성 형식으로 입력해 주세요.)</td>
-            </tr>
-            <!-- 외국인 회원 정보 -->
-            <tr>
-                <th scope="row" id="ssnTitle"></th>
-                <td id="ssnContents"></td>
-            </tr><!-- // 외국인 회원 정보 -->
-            <tr id="{$companyRow}">
-                <th scope="row">상호명 <img src="//img.echosting.cafe24.com/skin/base/common/ico_required_blue.gif" alt="필수" /></th>
-                <td id="companyName">{$form.cname}</td>
-            </tr>
-            <tr id="{$companyNoRow}">
-                <th scope="row">사업자번호 <img src="//img.echosting.cafe24.com/skin/base/common/ico_required_blue.gif" alt="필수" /></th>
-                <td id="companySsn">
-                    {$form.cssn}
-                    <a href="#none" class="btnNormal {$display_cssn_dupl|display}" onclick="{$action_cssn_dupl}">중복확인</a>
-                    <span id="{$cssnMsg_id}"></span>
-                </td>
-            </tr>
-            <tr id="nation">
-                <th>국적 <img src="//img.echosting.cafe24.com/skin/base/common/ico_required_blue.gif" alt="필수" /></th>
-                <td>{$form.citizenship}</td>
-            </tr>
-            <tr class="{$display_addr|display}">
-                <th scope="row">주소 <img src="//img.echosting.cafe24.com/skin/base/common/ico_required_blue.gif" class="{$display_required_address|display}" alt="필수" /></th>
-                <td>{$form.address}</td>
-            </tr>
-            <tr class="{$display_phone|display}">
-                <th scope="row">일반전화 <img src="//img.echosting.cafe24.com/skin/base/common/ico_required_blue.gif" class="{$display_required_phone|display}" alt="필수" /></th>
-                <td>{$form.phone}</td>
-            </tr>
-            <tr class="{$display_mobile|display}">
-                <th scope="row">휴대전화 <img src="//img.echosting.cafe24.com/skin/base/common/ico_required_blue.gif" class="{$display_required_cell|display}" alt="필수" /></th>
-                <td>
-                    {$form.mobile}<button type="button" id="{$btn_action_verify_mobile}" class="btnNormal {$display_verify_mobile|display}" onclick="{$action_verify_mobile}">인증번호받기</button>
-                    <p class="txtWarn gBlank5 {$bDisplayMobileVerifyInfoDefault|display}" id="{$result_send_verify_mobile_fail}"></p>
-                    <ul class="txtInfo gBlank5 {$bDisplayMobileVerifyInfoDefault|display}" id="{$result_send_verify_mobile_success}">
-                        <li>인증번호가 발송되었습니다.</li>
-                        <li>인증번호를 받지 못하셨다면 휴대폰 번호를 확인해 주세요.</li>
-                    </ul>
-                </td>
-            </tr>
-            <tr class="{$display_verify_mobile_confirm|display}" id="{$confirm_verify_mobile}">
-                <th scope="row">인증번호 <img src="//img.echosting.cafe24.com/skin/base/common/ico_required_blue.gif" alt="필수" /></th>
-                <td>
-                    <div class="verify">
-                        {$form.verify_sms_number}
-                        <span class="time" id="{$expiryTime}"></span>
-                    </div>
-                    <button type="button" class="btnNormal" id="{$btn_verify_mobile_confirm}" onclick="{$action_verify_mobile_confirm}">확인</button>
-                </td>
-            </tr>
-            <tr>
-                <th scope="row">이메일 <img src="//img.echosting.cafe24.com/skin/base/common/ico_required_blue.gif" alt="필수" /></th>
-                <td>{$form.email} <span id="{$emailMsg_id}"></span></td>
-            </tr>
-            <tr class="{$display_is_lifetime|display}">
-                <th scope="row">평생회원</th>
-                <td>
-                    {$form.is_lifetime}
-                    <ul class="txtDesc">
-                        <li>평생회원으로 가입하시면 <strong>{$mall_name}</strong> 회원 탈퇴시까지는 휴면회원으로 전환되지 않으며, 고객님의 개인정보가 탈퇴시까지 안전하게 보관됩니다.</li>
-                        <li class="{$display_is_lifetime_benefit|display}">지금 평생회원으로 가입하시면 쿠폰혜택을 드립니다. (쿠폰혜택을 받으신 경우, 3개월간 평생회원을 유지하셔야 합니다.)</li>
-                    </ul>
-                </td>
-            </tr>
-        </tbody>
-        </table>
-    </div>
+                </div>
+            </div>
+            <div class="pw-again">{$form.user_passwd_confirm} <span id="{$pwConfirmMsg_id}"></span> </div>
+        </div>
+        <!-- <div class="join--form-row">
+            <div class="join--subject">비밀번호 확인 <img src="/web/easyweb/image/icon_important_spot.png" alt="필수" /></div>
+            <div>{$form.user_passwd_confirm} <span id="{$pwConfirmMsg_id}"></span> </div>
+        </div> -->
+        <div class="{$display_hint|display}">
+            <div>비밀번호 확인 질문 <img src="/web/easyweb/image/icon_important_spot.png" alt="필수" /></div>
+            <div>{$form.hint}</div>
+        </div>
+        <div class="{$display_hint_answer|display}">
+            <div>비밀번호 확인 답변 <img src="/web/easyweb/image/icon_important_spot.png" alt="필수" /></div>
+            <div>{$form.hint_answer}</div>
+        </div>
+        <div class="join--form-row">
+            <div class="join--subject" id="{$name_title}">이름 <img src="/web/easyweb/image/icon_important_spot.png" alt="필수" /></div>
+            <div>
+                <span id="{$name_contents}">{$form.name}</span>
+                <span id="under14Msg" class="displaynone">14세 미만 사용자는 법정대리인 동의가 필요합니다.</span>
+            </div>
+        </div>
+        <div class="{$display_eng_name|display}">
+            <div>이름(영문) <img src="//img.echosting.cafe24.com/skin/base/common/ico_required_blue.gif" class="{$display_required_name_en|display}" alt="필수" /></div>
+            <div>{$form.name_en} (이름 - 성 형식으로 입력해 주세요.)</div>
+        </div>
+        <!-- 외국인 회원 정보 -->
+        <div>
+            <div id="ssnTitle"></div>
+            <div id="ssnContents"></div>
+        </div><!-- // 외국인 회원 정보 -->
+        <div id="{$companyRow}">
+            <div>상호명 <img src="/web/easyweb/image/icon_important_spot.png" alt="필수" /></div>
+            <div id="companyName">{$form.cname}</div>
+        </div>
+        <div id="{$companyNoRow}">
+            <div>사업자번호 <img src="/web/easyweb/image/icon_important_spot.png" alt="필수" /></div>
+            <div id="companySsn">
+                {$form.cssn}
+                <a href="#none" class="btnNormal {$display_cssn_dupl|display}" onclick="{$action_cssn_dupl}">중복확인</a>
+                <span id="{$cssnMsg_id}"></span>
+            </div>
+        </div>
+        <div id="nation">
+            <div>국적 <img src="/web/easyweb/image/icon_important_spot.png" alt="필수" /></div>
+            <div>{$form.citizenship}</div>
+        </div>
+        <div class="{$display_addr|display}">
+            <div>주소 <img src="//img.echosting.cafe24.com/skin/base/common/ico_required_blue.gif" class="{$display_required_address|display}" alt="필수" /></div>
+            <div>{$form.address}</div>
+        </div>
+        <div class="{$display_phone|display}">
+            <div>일반전화 <img src="//img.echosting.cafe24.com/skin/base/common/ico_required_blue.gif" class="{$display_required_phone|display}" alt="필수" /></div>
+            <div>{$form.phone}</div>
+        </div>
+        <div class="join--form-row {$display_mobile|display}">
+            <div class="join--subject">휴대전화 <img src="//img.echosting.cafe24.com/skin/base/common/ico_required_blue.gif" class="{$display_required_cell|display}" alt="필수" /></div>
+            <div>
+                {$form.mobile}<button type="button" id="{$btn_action_verify_mobile}" class="btnNormal {$display_verify_mobile|display}" onclick="{$action_verify_mobile}">인증번호받기</button>
+                <p class="txtWarn gBlank5 {$bDisplayMobileVerifyInfoDefault|display}" id="{$result_send_verify_mobile_fail}"></p>
+                <ul class="txtInfo gBlank5 {$bDisplayMobileVerifyInfoDefault|display}" id="{$result_send_verify_mobile_success}">
+                    <li>인증번호가 발송되었습니다.</li>
+                    <li>인증번호를 받지 못하셨다면 휴대폰 번호를 확인해 주세요.</li>
+                </ul>
+            </div>
+        </div>
+        <div class="{$display_verify_mobile_confirm|display}" id="{$confirm_verify_mobile}">
+            <div>인증번호 <img src="/web/easyweb/image/icon_important_spot.png" alt="필수" /></div>
+            <div>
+                <div class="verify">
+                    {$form.verify_sms_number}
+                    <span class="time" id="{$expiryTime}"></span>
+                </div>
+                <button type="button" class="btnNormal" id="{$btn_verify_mobile_confirm}" onclick="{$action_verify_mobile_confirm}">확인</button>
+            </div>
+        </div>
+        <div>
+            <div class="join--subject">이메일 <img src="/web/easyweb/image/icon_important_spot.png" alt="필수" /></div>
+            <div>{$form.email} <span id="{$emailMsg_id}"></span></div>
+            <p style="color:#8b8b8b;font-size:14px;margin-top:14px;">계정 분실 시 본인인증 정보로 활용됩니다.</p>
+        </div>
+        <div class="{$display_is_lifetime|display}">
+            <div>평생회원</div>
+            <div>
+                {$form.is_lifetime}
+                <ul class="txtDesc">
+                    <li>평생회원으로 가입하시면 <strong>{$mall_name}</strong> 회원 탈퇴시까지는 휴면회원으로 전환되지 않으며, 고객님의 개인정보가 탈퇴시까지 안전하게 보관됩니다.</li>
+                    <li class="{$display_is_lifetime_benefit|display}">지금 평생회원으로 가입하시면 쿠폰혜택을 드립니다. (쿠폰혜택을 받으신 경우, 3개월간 평생회원을 유지하셔야 합니다.)</li>
+                </ul>
+            </div>
+        </div>
+</div>
+
 
     <h3 class="{$display_add_title|display}">추가정보</h3>
     <div class="ec-base-table typeWrite {$display_add_title|display}">
@@ -368,13 +396,13 @@
         </table>
     </div>
 
-    <h3>전체 동의</h3>
+    <h3 class="join--agree-title">전체 동의</h3>
     <div class="ec-base-box typeThinBg gStrong">
         <p>{$sAgreeAllChecked}<label for="sAgreeAllChecked"><strong>이용약관 및 개인정보수집 및 이용, 쇼핑정보 수신(선택)에 모두 동의합니다.</strong></label></p>
     </div>
 
     <div class="ec-base-box typeThinBg agreeArea">
-        <h3>[필수] 이용약관 동의</h3>
+        <h3><span>[필수]</span> 이용약관 동의</h3>
         <div class="content">
             {$service_desc}
         </div>
@@ -382,7 +410,7 @@
     </div>
 
     <div class="ec-base-box typeThinBg agreeArea">
-        <h3>[필수] 개인정보 수집 및 이용 동의</h3>
+        <h3><span>[필수]</span> 개인정보 수집 및 이용 동의</h3>
         <div class="content">
             {$privacy_desc}
         </div>
@@ -430,9 +458,21 @@
         </ul>
      </div>
 
-    <div class="ec-base-button">
-        <a href="#none" class="btnSubmitFix sizeM" onclick="{$action_func_join}">회원가입</a>
+    <div class="join--button-end">
+        <a href="javascript:history.back();" class="join--button-cancel">취소</a>
+        <a href="#none" class="join--button-confirm" onclick="{$action_func_join}">회원가입 완료</a>
     </div>
 
     <!--@import(/member/join_confirm.html)-->
-</div>
+</div><!--join--container -->
+</div><!--public-wrap -->
+</div><!--public-box -->
+<script>
+setTimeout(()=>{
+	$(".header--wrap").removeClass("white")
+	$(".header--wrap").addClass("black")
+    $("#member_id").attr({"Placeholder":"영문, 숫자 5~11자를 입력해 주세요."})
+    $("#passwd").attr({"Placeholder":"숫자, 영문, 특수문자 조합 최소 8자"})
+    $("#user_passwd_confirm").attr({"Placeholder":"비밀번호를 재입력해 주세요."})
+})
+</script>

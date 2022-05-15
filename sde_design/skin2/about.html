@@ -17,13 +17,13 @@
     .about--section1-text2 p span{display: block;line-height: 1;}
     .about--section1-text2 p:nth-child(1){font-style: italic;}
     .about--section1-text2 p:nth-child(3){font-style: italic;}
-    .about--section1-text3{margin-bottom: 24px;font-size: 20px;font-weight: 600;letter-spacing: -0.3px;}
-    .about--section1-text4{margin-bottom:120px;font-size: 16px;font-weight: 400;letter-spacing: -0.3px;}
+    .about--section1-text3{margin-bottom: 24px;font-size: 20px;font-weight: 600;letter-spacing: -0.3px;word-break:keep-all;line-height:1.3;}
+    .about--section1-text4{margin-bottom:120px;font-size: 16px;font-weight: 400;letter-spacing: -0.3px;word-break:keep-all;line-height:1.3;}
 
     .about--section2{margin-top: 180px;}
     .about--section2-textBox{width: 100%;max-width: 1192px;display: flex;justify-content: space-between;}
     .about--section2-textBox p{width: 50%;word-break: keep-all;}
-    .about--section2-textBox p:nth-child(1){max-width: 495px;font-size: 32px;line-height: 1.3;font-weight: 600;}
+    .about--section2-textBox p:nth-child(1){max-width: 495px;font-size: 32px;line-height: 1.3;font-weight: 600;margin-right:12px;}
     .about--section2-textBox p:nth-child(2){max-width: 560px;font-size: 16px;line-height: 1.66;letter-spacing: -0.3px;}
 
     .about--section3{overflow:hidden;margin-top:160px;}
@@ -57,7 +57,7 @@
     .about--section4-kakao .about--section4-arrow span:nth-child(1){border-top:1px solid #000;border-right:1px solid #000;}
     .about--section4-kakao .about--section4-arrow span:nth-child(2){background-color: #000;}
 
-    .about--section4-map-guide{margin-bottom: 180px;display:flex;justify-content: space-between;}
+    .about--section4-map-guide{margin-bottom: 180px;display:flex;justify-content: space-between;word-break: keep-all;}
     .about--section4-map-guideBox{width:calc(50% - 10px)}
     .about--section4-map-guideBox-row{margin-bottom: 26px;}
     .about--section4-map-guideBox-row:last-child{margin-bottom: 0;}
@@ -70,6 +70,36 @@
     .about--section4-map-guide span{display: block;margin-right: 6px;}
     .about--section4-map-guide span.bus{padding: 2px 4px;color: #ffffff;background-color: #72ad3f;font-size: 13px;}
     .about--section4-map-guide span.train{padding: 4px 10px;color: #ffffff;background-color: #33a23d;border-radius: 50%;}
+    @media all and (max-width:1024px){
+        .about--section1-text2{font-size: 100px;}
+        .about--section2-textBox{flex-direction: column;}
+        .about--section2-textBox p{width:100%;margin:0;}
+        .about--section2-textBox p:nth-child(1){margin-right:0;margin-bottom:24px;max-width:unset;}
+        .about--section2-textBox p:nth-child(2){max-width:unset;}
+
+        .about--section3 .swiper-slide{width:480px;}
+    }
+    @media all and (max-width:767px){
+        .about--container{padding-left:40px;padding-right:40px;}
+        .about--section1-text2{font-size: 80px;}
+        .about--section2-textBox p:nth-child(1){font-size:24px;}
+
+        .about--section3 .swiper-slide{width:320px;}
+
+        .about--section4-map-guideBox-text1{font-size: 16px;margin-bottom: 16px;}
+        .about--section4-map-guideBox-text2{font-size: 14px;}
+    }
+    @media all and (max-width:480px){
+        .about--container{padding-left:20px;padding-right:20px;}
+        .about--section1-text2{font-size: 72px;}
+        .about--section2-textBox p:nth-child(1){font-size:18px;}
+        .about--section2-textBox p:nth-child(2){font-size:14px;}
+
+        .about--section3 .swiper-slide{width:240px;}
+
+        .about--section4-map-guide{display: block;}
+        .about--section4-map-guideBox{width: 100%;}
+    }
 </style>
 <div class="about--wrap">
     <div class="uniform--container about--container">
