@@ -1,0 +1,164 @@
+<!--@layout(/layout/basic/layout.html)-->
+<style>
+    *{margin: 0;padding: 0;box-sizing: border-box;}
+    .introduce--container{width: 100%;max-width: 1400px;margin: auto;padding-left:60px;padding-right:60px;}
+    @media all and (max-width:1024px){
+        .introduce--container{padding-left: 50px;padding-right: 50px;}
+    }
+    @media all and (max-width:1024px){
+        .introduce--container{padding-left: 40px;padding-right: 40px;}
+    }
+    @media all and (max-width:480px){
+        .introduce--container{padding-left: 20px;padding-right: 20px;}
+    }
+    .uniform--container{width: 100%;display: flex;justify-content: flex-end;padding-top:130px;}
+    .uniform--container span{color: #8b8b8b;}
+    .uniform--container span.uniform--now{color: #ff7f30;letter-spacing: -0.35px;}
+    .uniform--gt{margin: 0 4px 0 8px;}
+
+    .introduce--title{margin-top: 60px;}
+    .introduce--title-small{font-size: 20px;font-weight: 600;}
+    .introduce--title-big{margin-top: 24px;font-size: 48px;font-weight: 600;}
+    .introduce--swiper{margin-top: 60px;}
+    .introduce--swiper--bottom{position: relative;margin-top: 28px;}
+    .introduce--swiper .swiper-slide img{width: 100%;}
+    .introduce--swiper .swiper--button-wrap{position: absolute;width: 100%;top: 50%;left: 50%;transform: translate(-50%,-50%);}
+    .introduce--swiper .swiper-button-prev,
+    .introduce--swiper .swiper-button-next{opacity: 1;--swiper-theme-color:#000;}
+    .introduce--thumb-swiper{width:calc(100% - 100px);overflow: hidden;font-size: 16px;letter-spacing: -0.3px;line-height: 1.6;}
+
+    .introduce--exp{margin-top: 60px;background-color: #f2f2f2;border: 1px solid #cccccc;padding: 32px;}
+    .introduce--exp p{width: 100%;max-width: 1210px;word-break: keep-all;font-size: 16px;line-height: 1.6;}
+
+    .introduce--download{text-align: center;margin-top: 120px;margin-bottom: 180px;word-break: keep-all;}
+    .introduce--download-text1{font-weight: 700;font-size: 24px;}
+    .introduce--download-text2{font-size: 16px;margin-top: 24px;}
+    .introduce--download-button{margin-top: 40px;display: flex;justify-content: center;}
+    .introduce--download-button a{font-size: 16px;font-weight: 700;padding: 22px 44px;color: #fff;background-color: #000;}
+    .swiper-button-next:after, .swiper-button-prev:after{font-size: 24px;}
+    @media all and (max-width:480px){
+        .introduce--title-small{font-size: 16px;}
+        .introduce--title-big{font-size: 24px;}
+
+        .introduce--swiper{margin-top: 30px;}
+
+        .introduce--download{margin-top: 60px;margin-bottom: 90px;}
+        .introduce--exp{padding: 16px;}
+        .introduce--exp p,
+        .introduce--download-text2,
+        .introduce--download-button a,
+        .introduce--thumb-swiper{font-size: 14px;}
+        .introduce--download-text1{font-size: 18px;}
+
+        .introduce--thumb-swiper{width: calc(100% - 60px);}
+        .swiper-button-next{right: 0;}
+        .swiper-button-prev{left: 0;}
+        .swiper-button-next, .swiper-button-prev{width:20px;}
+        .swiper-button-next:after, .swiper-button-prev:after{font-size: 22px;}
+    }
+</style>
+<div class="introduce--wrap">
+    <div class="uniform--container introduce--container">
+            <a href="/"><span>Home</span></a>
+            <span class="uniform--gt">&gt;</span>
+            <span class="uniform--now">연남스페이스</span>
+    </div>
+    <div class="introduce--title introduce--container">
+        <div class="introduce--title-small"><p>#시설안내</p></div>
+        <div class="introduce--title-big"><p>시설안내</p></div>
+    </div>
+    <div class="introduce--swiper introduce--container">
+        <div class="swiper mySwiper2">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="/web/easyweb/image/main_bg1.jpg" /></div>
+                <div class="swiper-slide"><img src="/web/easyweb/image/main_bg2.jpg" /></div>
+                <div class="swiper-slide"><img src="/web/easyweb/image/main_bg3.jpg" /></div>
+                <div class="swiper-slide"><img src="/web/easyweb/image/main_bg4.jpg" /></div>
+                <div class="swiper-slide"><img src="/web/easyweb/image/main_bg5.jpg" /></div>
+                <div class="swiper-slide"><img src="/web/easyweb/image/main_bg6.jpg" /></div>
+                <div class="swiper-slide"><img src="/web/easyweb/image/main_bg7.jpg" /></div>
+                <div class="swiper-slide"><img src="/web/easyweb/image/main_bg8.jpg" /></div>
+                <div class="swiper-slide"><img src="/web/easyweb/image/main_bg9.jpg" /></div>
+                <div class="swiper-slide"><img src="/web/easyweb/image/main_bg10.jpg" /></div>
+                <div class="swiper-slide"><img src="/web/easyweb/image/main_bg11.jpg" /></div>
+                <div class="swiper-slide"><img src="/web/easyweb/image/main_bg12.jpg" /></div>
+                <div class="swiper-slide"><img src="/web/easyweb/image/main_bg13.jpg" /></div>
+                <div class="swiper-slide"><img src="/web/easyweb/image/main_bg14.jpg" /></div>
+                <div class="swiper-slide"><img src="/web/easyweb/image/main_bg15.jpg" /></div>
+                <div class="swiper-slide"><img src="/web/easyweb/image/main_bg16.jpg" /></div>
+                <div class="swiper-slide"><img src="/web/easyweb/image/main_bg17.jpg" /></div>
+                <div class="swiper-slide"><img src="/web/easyweb/image/main_bg18.jpg" /></div>
+                <div class="swiper-slide"><img src="/web/easyweb/image/main_bg19.jpg" /></div>
+                <div class="swiper-slide"><img src="/web/easyweb/image/main_bg20.jpg" /></div>
+                <div class="swiper-slide"><img src="/web/easyweb/image/main_bg21.jpg" /></div>
+                <div class="swiper-slide"><img src="/web/easyweb/image/main_bg22.jpg" /></div>
+                <div class="swiper-slide"><img src="/web/easyweb/image/main_bg23.jpg" /></div>
+                <div class="swiper-slide"><img src="/web/easyweb/image/main_bg24.jpg" /></div>
+            </div>
+        </div>
+        <div class="introduce--swiper--bottom">
+            <div thumbsSlider="" class="swiper introduce--thumb-swiper mySwiper">
+                <div class="swiper-wrapper swiper-thumb-wrapper">
+                </div>
+            </div>
+            <div class="swiper--button-wrap">
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+            </div>
+        </div>
+    </div>
+    <div class="introduce--container">
+        <div class="introduce--exp">
+            <p>좌석수는 1층과 1층 계단석 약 130석과 2층 라운지 석 20명 총 150명의 좌석이 준비되어있고 스텐딩은 200~250명, 2층 라운지석은 대관 사용자 분들이 특별하게 사용하실 수 있습니다. 기본적인 음향 시설과 조명시설, 4K 팬틸트 카메라로 라이브스트리밍, 8000안시  레이져 프로젝터로 스크린을 사용하는 모든 것이 포함되어 있습니다.</p>
+        </div>
+    </div>
+    <div class="introduce--container">
+        <div class="introduce--download">
+            <div class="introduce--download-text1"><p>좌석 배치도</p></div>
+            <div class="introduce--download-text2"><p>다운로드 버튼을 클릭하시면 좌석 배치도를 확인 하실 수 있습니다.</p></div>
+            <div class="introduce--download-button">
+                <a href=""><p>좌석안내 다운로드</p></a>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+setTimeout(()=>{
+	$(".header--wrap").removeClass("white")
+	$(".header--wrap").addClass("black")
+
+    var swiper = new Swiper(".mySwiper", {
+        spaceBetween: 10,
+        slidesPerView: 2.5,
+        freeMode: true,
+        watchSlidesProgress: true,
+        breakpoints:{
+            480:{
+                slidesPerView:3.5,
+            },
+            768:{
+                slidesPerView:4.5,
+            },
+            1024:{
+                slidesPerView:5.5,
+            },
+        }
+      });
+      var swiper2 = new Swiper(".mySwiper2", {
+        spaceBetween: 10,
+        centeredSlides: true,
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+        thumbs: {
+          swiper: swiper,
+        },
+      });
+
+    $(".mySwiper2 .swiper-wrapper .swiper-slide").each(function(){
+        var thisClone = $(this).clone();
+        thisClone.appendTo(".swiper-thumb-wrapper")
+    })
+})
+</script>

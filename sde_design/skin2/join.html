@@ -18,12 +18,15 @@
     .join--form input{width: 100%;padding: 8px;height: 48px;font-size: 15px;}
     .join--form select{padding: 8px;height: 48px;font-size: 15px;width: 64px !important;}
     .join--form .eTooltip{width: 100%;}
-    .join--title{margin-bottom: 40px;font-size: 32px;font-weight: 600;display: flex;}
+    .join--title{margin-bottom: 68px;padding-bottom: 40px;font-size: 32px;font-weight: 600;display: flex;border-bottom: 2px solid #000000;}
     .join--title .keyColor{color: #ff7f30;}
     .join--form-row{margin-bottom: 28px;}
     .join--subject{font-size: 16px;font-weight: 600;margin-bottom: 14px;}
     .pw-again{margin-top: 10px;}
 
+    .join--caution{margin-bottom: 48px;display: flex;justify-content: space-between;align-items: flex-end;}
+    .join--caution h3{font-size: 24px;}
+    .join--caution .required{margin: 0;}
     .join--button-end{margin-top:60px;display: flex;justify-content: space-between;}
     .join--button-end a{width: calc(50% - 11px);display: block;padding: 26px 0;text-align: center;border: 1px solid #000;font-size: 18px;font-weight: 600;}
     .join--button-end a:nth-child(2){background-color: #000000;color: #ffffff;}
@@ -34,12 +37,14 @@
 
     .xans-member-join .ec-base-box + .ec-base-box{margin-top:0;}
     .ec-base-table img{vertical-align: top;}
-    #passwd{background-image: url(/web/easyweb/image/icon_visible.png);background-size: 22px 15px;background-repeat: no-repeat;background-position: calc(100% - 12px) center;}
+
 </style>
     <div class="uniform--container">
             <a href="/"><span>Home</span></a>
             <span class="uniform--gt">&gt;</span>
-            <span class="uniform--now">회원가입</span>
+        	<span class="">회원가입</span>
+            <span class="uniform--gt">&gt;</span>
+            <span class="uniform--now">정보입력</span>
     </div>
 <div module="member_join" class="public-box">
 <div class="public-wrap">
@@ -68,7 +73,7 @@
             <col style="width:auto;" />
         </colgroup>
         <tbody>
-            <tr class="{$display_member_type|display}">
+            <tr class="{$display_member_type|display}" style="display:none;">
                 <th scope="row">회원구분 <img src="/web/easyweb/image/icon_important_spot.png" alt="필수" /></th>
                 <td>{$form.member_type}</td>
             </tr>
@@ -130,9 +135,10 @@
         </tbody>
         </table>
     </div>
-
-    <h3 class="{$display_base_column_title|display}">기본정보</h3>
-    <p class="required {$display_base_column_title|display}"><img src="/web/easyweb/image/icon_important_spot.png" alt="필수" /> 필수입력사항</p>
+    <div class="join--caution">
+        <h3 class="{$display_base_column_title|display}">회원정보</h3>
+        <p class="{$display_base_column_title|display} required"><img src="/web/easyweb/image/icon_important_spot.png" alt="필수" />필수입력사항</p>
+    </div>
     <div class="ec-base-table typeWrite join--form">
         <div class="join--form-row {$display_use_id|display}">
             <div class="join--subject">아이디 <img src="/web/easyweb/image/icon_important_spot.png" alt="필수" /></div>
@@ -177,7 +183,7 @@
             </div>
         </div>
         <div class="{$display_eng_name|display}">
-            <div>이름(영문) <img src="//img.echosting.cafe24.com/skin/base/common/ico_required_blue.gif" class="{$display_required_name_en|display}" alt="필수" /></div>
+            <div>이름(영문) <img src="/web/easyweb/image/icon_important_spot.png" class="{$display_required_name_en|display}" alt="필수" /></div>
             <div>{$form.name_en} (이름 - 성 형식으로 입력해 주세요.)</div>
         </div>
         <!-- 외국인 회원 정보 -->
@@ -201,16 +207,16 @@
             <div>국적 <img src="/web/easyweb/image/icon_important_spot.png" alt="필수" /></div>
             <div>{$form.citizenship}</div>
         </div>
-        <div class="{$display_addr|display}">
-            <div>주소 <img src="//img.echosting.cafe24.com/skin/base/common/ico_required_blue.gif" class="{$display_required_address|display}" alt="필수" /></div>
+        <div class="join--form-row {$display_addr|display}">
+            <div>주소 <img src="/web/easyweb/image/icon_important_spot.png" class="{$display_required_address|display}" alt="필수" /></div>
             <div>{$form.address}</div>
         </div>
-        <div class="{$display_phone|display}">
-            <div>일반전화 <img src="//img.echosting.cafe24.com/skin/base/common/ico_required_blue.gif" class="{$display_required_phone|display}" alt="필수" /></div>
+        <div class="join--form-row {$display_phone|display}">
+            <div class="join--subject">일반전화 <img src="/web/easyweb/image/icon_important_spot.png" class="{$display_required_phone|display}" alt="필수" /></div>
             <div>{$form.phone}</div>
         </div>
         <div class="join--form-row {$display_mobile|display}">
-            <div class="join--subject">휴대전화 <img src="//img.echosting.cafe24.com/skin/base/common/ico_required_blue.gif" class="{$display_required_cell|display}" alt="필수" /></div>
+            <div class="join--subject">휴대전화 <img src="/web/easyweb/image/icon_important_spot.png" class="{$display_required_cell|display}" alt="필수" /></div>
             <div>
                 {$form.mobile}<button type="button" id="{$btn_action_verify_mobile}" class="btnNormal {$display_verify_mobile|display}" onclick="{$action_verify_mobile}">인증번호받기</button>
                 <p class="txtWarn gBlank5 {$bDisplayMobileVerifyInfoDefault|display}" id="{$result_send_verify_mobile_fail}"></p>
@@ -258,129 +264,129 @@
         </colgroup>
         <tbody>
             <tr class="{$display_nick|display}">
-                <th scope="row">별명 <img src="//img.echosting.cafe24.com/skin/base/common/ico_required_blue.gif" class="{$display_required_nick_name_flag|display}" alt="필수" /></th>
+                <th scope="row">별명 <img src="/web/easyweb/image/icon_important_spot.png" class="{$display_required_nick_name_flag|display}" alt="필수" /></th>
                 <td>{$form.nick_name} <p id="{$nick_msg}"></p></td>
             </tr>
             <tr class="{$display_is_sex|display}">
-                <th scope="row">성별 <img src="//img.echosting.cafe24.com/skin/base/common/ico_required_blue.gif" class="{$display_required_sex|display}" alt="필수" /></th>
+                <th scope="row">성별 <img src="/web/easyweb/image/icon_important_spot.png" class="{$display_required_sex|display}" alt="필수" /></th>
                 <td>{$form.is_sex}</td>
             </tr>
             <tr class="{$display_birthday|display}">
-                <th scope="row">생년월일 <img src="//img.echosting.cafe24.com/skin/base/common/ico_required_blue.gif" class="{$display_required_is_birthday|display}" alt="필수" /></th>
+                <th scope="row">생년월일 <img src="/web/easyweb/image/icon_important_spot.png" class="{$display_required_is_birthday|display}" alt="필수" /></th>
                 <td>{$form.birth_year} 년 {$form.birth_month} 월 {$form.birth_day} 일 <span class="gIndent20 {$display_calendar_type|display}">{$form.is_solar_calendar}</span></td>
             </tr>
             <tr class="{$display_marry|display}">
-                <th scope="row">결혼기념일 <img src="//img.echosting.cafe24.com/skin/base/common/ico_required_blue.gif" class="{$display_required_is_wedding_anniversary|display}" alt="필수" /></th>
+                <th scope="row">결혼기념일 <img src="/web/easyweb/image/icon_important_spot.png" class="{$display_required_is_wedding_anniversary|display}" alt="필수" /></th>
                 <td>{$form.marry_year} 년 {$form.marry_month} 월 {$form.marry_day} 일</td>
             </tr>
             <tr class="{$display_partner|display}">
-                <th scope="row">배우자생일 <img src="//img.echosting.cafe24.com/skin/base/common/ico_required_blue.gif" class="{$display_required_is_life_partner|display}" alt="필수" /></th>
+                <th scope="row">배우자생일 <img src="/web/easyweb/image/icon_important_spot.png" class="{$display_required_is_life_partner|display}" alt="필수" /></th>
                 <td>{$form.partner_year} 년 {$form.partner_month} 월 {$form.partner_day} 일</td>
             </tr>
             <tr class="{$display_child|display}">
-                <th scope="row">자녀 <img src="//img.echosting.cafe24.com/skin/base/common/ico_required_blue.gif" class="{$display_required_child|display}" alt="필수" /></th>
+                <th scope="row">자녀 <img src="/web/easyweb/image/icon_important_spot.png" class="{$display_required_child|display}" alt="필수" /></th>
                 <td>{$form.child}</td>
             </tr>
             <tr class="{$display_school|display}">
-                <th scope="row">최종학력 <img src="//img.echosting.cafe24.com/skin/base/common/ico_required_blue.gif" class="{$display_required_school|display}" alt="필수" /></th>
+                <th scope="row">최종학력 <img src="/web/easyweb/image/icon_important_spot.png" class="{$display_required_school|display}" alt="필수" /></th>
                 <td>{$form.school}</td>
             </tr>
             <tr class="{$display_job_class|display}">
-                <th scope="row">직종 <img src="//img.echosting.cafe24.com/skin/base/common/ico_required_blue.gif" class="{$display_required_job_class|display}" alt="필수" /></th>
+                <th scope="row">직종 <img src="/web/easyweb/image/icon_important_spot.png" class="{$display_required_job_class|display}" alt="필수" /></th>
                 <td>{$form.job_class}</td>
             </tr>
             <tr class="{$display_job|display}">
-                <th scope="row">직업 <img src="//img.echosting.cafe24.com/skin/base/common/ico_required_blue.gif" class="{$display_required_job|display}" alt="필수" /></th>
+                <th scope="row">직업 <img src="/web/easyweb/image/icon_important_spot.png" class="{$display_required_job|display}" alt="필수" /></th>
                 <td>{$form.job}</td>
             </tr>
             <tr class="{$display_earning|display}">
-                <th scope="row">연소득 <img src="//img.echosting.cafe24.com/skin/base/common/ico_required_blue.gif" class="{$display_required_earning|display}" alt="필수" /></th>
+                <th scope="row">연소득 <img src="/web/easyweb/image/icon_important_spot.png" class="{$display_required_earning|display}" alt="필수" /></th>
                 <td>{$form.earning}</td>
             </tr>
             <tr class="{$display_car|display}">
-                <th scope="row">자동차 <img src="//img.echosting.cafe24.com/skin/base/common/ico_required_blue.gif" class="{$display_required_car|display}" alt="필수" /></th>
+                <th scope="row">자동차 <img src="/web/easyweb/image/icon_important_spot.png" class="{$display_required_car|display}" alt="필수" /></th>
                 <td>{$form.car}</td>
             </tr>
             <tr class="{$display_region|display}">
-                <th scope="row">지역 <img src="//img.echosting.cafe24.com/skin/base/common/ico_required_blue.gif" class="{$display_required_region|display}" alt="필수" /></th>
+                <th scope="row">지역 <img src="/web/easyweb/image/icon_important_spot.png" class="{$display_required_region|display}" alt="필수" /></th>
                 <td>{$form.region}</td>
             </tr>
             <tr class="{$display_internet|display}">
-                <th scope="row">인터넷 이용장소 <img src="//img.echosting.cafe24.com/skin/base/common/ico_required_blue.gif" class="{$display_required_internet|display}" alt="필수" /></th>
+                <th scope="row">인터넷 이용장소 <img src="/web/easyweb/image/icon_important_spot.png" class="{$display_required_internet|display}" alt="필수" /></th>
                 <td>{$form.internet}</td>
             </tr>
             <tr class="{$display_inter|display}">
-                <th scope="row">관심분야 <img src="//img.echosting.cafe24.com/skin/base/common/ico_required_blue.gif" class="{$display_required_interest|display}" alt="필수" /></th>
+                <th scope="row">관심분야 <img src="/web/easyweb/image/icon_important_spot.png" class="{$display_required_interest|display}" alt="필수" /></th>
                 <td>
                     <div class="interest">{$form.inter_check}</div>
                 </td>
             </tr>
             <tr class="{$display_add1|display}">
-                <th scope="row">{$title_add1} <img src="//img.echosting.cafe24.com/skin/base/common/ico_required_blue.gif" class="{$display_required_add1|display}" alt="필수" /></th>
+                <th scope="row">{$title_add1} <img src="/web/easyweb/image/icon_important_spot.png" class="{$display_required_add1|display}" alt="필수" /></th>
                 <td>{$form.add1}</td>
             </tr>
             <tr class="{$display_add2|display}">
-                <th scope="row">{$title_add2} <img src="//img.echosting.cafe24.com/skin/base/common/ico_required_blue.gif" class="{$display_required_add2|display}" alt="필수" /></th>
+                <th scope="row">{$title_add2} <img src="/web/easyweb/image/icon_important_spot.png" class="{$display_required_add2|display}" alt="필수" /></th>
                 <td>{$form.add2}</td>
             </tr>
             <tr class="{$display_add3|display}">
-                <th scope="row">{$title_add3} <img src="//img.echosting.cafe24.com/skin/base/common/ico_required_blue.gif" class="{$display_required_add3|display}" alt="필수" /></th>
+                <th scope="row">{$title_add3} <img src="/web/easyweb/image/icon_important_spot.png" class="{$display_required_add3|display}" alt="필수" /></th>
                 <td>{$form.add3}</td>
             </tr>
             <tr class="{$display_add4|display}">
-                <th scope="row">{$title_add4} <img src="//img.echosting.cafe24.com/skin/base/common/ico_required_blue.gif" class="{$display_required_add4|display}" alt="필수" /></th>
+                <th scope="row">{$title_add4} <img src="/web/easyweb/image/icon_important_spot.png" class="{$display_required_add4|display}" alt="필수" /></th>
                 <td>{$form.add4}</td>
             </tr>
             <tr class="{$display_add5|display}">
-                <th scope="row">{$title_add5} <img src="//img.echosting.cafe24.com/skin/base/common/ico_required_blue.gif" class="{$display_required_add5|display}" alt="필수" /></th>
+                <th scope="row">{$title_add5} <img src="/web/easyweb/image/icon_important_spot.png" class="{$display_required_add5|display}" alt="필수" /></th>
                 <td>{$form.add5}</td>
             </tr>
             <tr class="{$display_add6|display}">
-                <th scope="row">{$title_add6} <img src="//img.echosting.cafe24.com/skin/base/common/ico_required_blue.gif" class="{$display_required_add6|display}" alt="필수" /></th>
+                <th scope="row">{$title_add6} <img src="/web/easyweb/image/icon_important_spot.png" class="{$display_required_add6|display}" alt="필수" /></th>
                 <td>{$form.add6}</td>
             </tr>
             <tr class="{$display_add7|display}">
-                <th scope="row">{$title_add7} <img src="//img.echosting.cafe24.com/skin/base/common/ico_required_blue.gif" class="{$display_required_add7|display}" alt="필수" /></th>
+                <th scope="row">{$title_add7} <img src="/web/easyweb/image/icon_important_spot.png" class="{$display_required_add7|display}" alt="필수" /></th>
                 <td>{$form.add7}</td>
             </tr>
             <tr class="{$display_add8|display}">
-                <th scope="row">{$title_add8} <img src="//img.echosting.cafe24.com/skin/base/common/ico_required_blue.gif" class="{$display_required_add8|display}" alt="필수" /></th>
+                <th scope="row">{$title_add8} <img src="/web/easyweb/image/icon_important_spot.png" class="{$display_required_add8|display}" alt="필수" /></th>
                 <td>{$form.add8}</td>
             </tr>
             <tr class="{$display_add9|display}">
-                <th scope="row">{$title_add9} <img src="//img.echosting.cafe24.com/skin/base/common/ico_required_blue.gif" class="{$display_required_add9|display}" alt="필수" /></th>
+                <th scope="row">{$title_add9} <img src="/web/easyweb/image/icon_important_spot.png" class="{$display_required_add9|display}" alt="필수" /></th>
                 <td>{$form.add9}</td>
             </tr>
             <tr class="{$display_add10|display}">
-                <th scope="row">{$title_add10} <img src="//img.echosting.cafe24.com/skin/base/common/ico_required_blue.gif" class="{$display_required_add10|display}" alt="필수" /></th>
+                <th scope="row">{$title_add10} <img src="/web/easyweb/image/icon_important_spot.png" class="{$display_required_add10|display}" alt="필수" /></th>
                 <td>{$form.add10}</td>
             </tr>
             <tr class="{$display_add11|display}">
-                <th scope="row">{$title_add11} <img src="//img.echosting.cafe24.com/skin/base/common/ico_required_blue.gif" class="{$display_required_add11|display}" alt="필수" /></th>
+                <th scope="row">{$title_add11} <img src="/web/easyweb/image/icon_important_spot.png" class="{$display_required_add11|display}" alt="필수" /></th>
                 <td>{$form.add11}</td>
             </tr>
             <tr class="{$display_add12|display}">
-                <th scope="row">{$title_add12} <img src="//img.echosting.cafe24.com/skin/base/common/ico_required_blue.gif" class="{$display_required_add12|display}" alt="필수" /></th>
+                <th scope="row">{$title_add12} <img src="/web/easyweb/image/icon_important_spot.png" class="{$display_required_add12|display}" alt="필수" /></th>
                 <td>{$form.add12}</td>
             </tr>
             <tr class="{$display_add13|display}">
-                <th scope="row">{$title_add13} <img src="//img.echosting.cafe24.com/skin/base/common/ico_required_blue.gif" class="{$display_required_add13|display}" alt="필수" /></th>
+                <th scope="row">{$title_add13} <img src="/web/easyweb/image/icon_important_spot.png" class="{$display_required_add13|display}" alt="필수" /></th>
                 <td>{$form.add13}</td>
             </tr>
             <tr class="{$display_add14|display}">
-                <th scope="row">{$title_add14} <img src="//img.echosting.cafe24.com/skin/base/common/ico_required_blue.gif" class="{$display_required_add14|display}" alt="필수" /></th>
+                <th scope="row">{$title_add14} <img src="/web/easyweb/image/icon_important_spot.png" class="{$display_required_add14|display}" alt="필수" /></th>
                 <td>{$form.add14}</td>
             </tr>
             <tr class="{$display_add15|display}">
-                <th scope="row">{$title_add15} <img src="//img.echosting.cafe24.com/skin/base/common/ico_required_blue.gif" class="{$display_required_add15|display}" alt="필수" /></th>
+                <th scope="row">{$title_add15} <img src="/web/easyweb/image/icon_important_spot.png" class="{$display_required_add15|display}" alt="필수" /></th>
                 <td>{$form.add15}</td>
             </tr>
             <tr class="{$display_reco_id|display}">
-                <th scope="row">추천인 아이디 <img src="//img.echosting.cafe24.com/skin/base/common/ico_required_blue.gif" class="{$display_required_reco_id|display}" alt="필수" /></th>
+                <th scope="row">추천인 아이디 <img src="/web/easyweb/image/icon_important_spot.png" class="{$display_required_reco_id|display}" alt="필수" /></th>
                 <td>{$form.reco_id}</td>
             </tr>
             <tr class="{$display_bank|display}">
-                <th scope="row">환불계좌 정보 <img src="//img.echosting.cafe24.com/skin/base/common/ico_required_blue.gif" class="{$display_required_bank_account_no|display}" alt="필수" /></th>
+                <th scope="row">환불계좌 정보 <img src="/web/easyweb/image/icon_important_spot.png" class="{$display_required_bank_account_no|display}" alt="필수" /></th>
                 <td>
                     <dl class="ec-base-desc typeDot">
                         <dt>예금주</dt>
@@ -396,7 +402,7 @@
         </table>
     </div>
 
-    <h3 class="join--agree-title">전체 동의</h3>
+    <h3 class="join--agree-title">마케팅 활용 동의</h3>
     <div class="ec-base-box typeThinBg gStrong">
         <p>{$sAgreeAllChecked}<label for="sAgreeAllChecked"><strong>이용약관 및 개인정보수집 및 이용, 쇼핑정보 수신(선택)에 모두 동의합니다.</strong></label></p>
     </div>
@@ -474,5 +480,7 @@ setTimeout(()=>{
     $("#member_id").attr({"Placeholder":"영문, 숫자 5~11자를 입력해 주세요."})
     $("#passwd").attr({"Placeholder":"숫자, 영문, 특수문자 조합 최소 8자"})
     $("#user_passwd_confirm").attr({"Placeholder":"비밀번호를 재입력해 주세요."})
+    $("#nameContents input").attr({"Placeholder":"이름을 입력해 주세요."})
+    console.log($("#name"))
 })
 </script>

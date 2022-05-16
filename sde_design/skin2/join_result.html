@@ -1,0 +1,102 @@
+<!--@layout(/layout/basic/layout.html)-->
+<style>
+    .uniform--container{padding:0 60px;;max-width:1400px;margin:auto;width: 100%;display: flex;justify-content: flex-end;padding-top:130px;}
+    .uniform--container span{color: #8b8b8b;}
+    .uniform--container span.uniform--now{color: #ff7f30;letter-spacing: -0.35px;}
+    .uniform--gt{margin: 0 4px 0 8px;}
+    
+    .join--title{margin-bottom: 68px;padding-bottom: 40px;font-size: 32px;font-weight: 600;display: flex;margin-top:160px;border-bottom: 2px solid #000000;}
+    .join--title .keyColor{color: #ff7f30;}
+	.join--container{width:100%;max-width:630px;margin-left:auto;margin-right:auto;}
+    .public--container{width:1400px; padding: 0 60px;margin-left:auto;margin-right:auto;}
+    
+    .join--body{text-align:center;width:100%;max-width:270px;word-break:keep-all;}
+    .join--body img{display:block;margin:auto;}
+    .join--body-text1{font-size:32px;color:#000000;margin-top:36px;font-weight:600;}
+    .join--body-text2{font-size:14px;color:#8b8b8b;margin-top:18px;line-height:1.6;}
+    
+    .join--body-goToMain{display:flex;justify-content:center;margin-top:60px;margin-bottom:110px;}
+    .join--body-goToMain a{padding:26px 0;border:1px solid #000;width:100%;max-width:304px;}
+</style>
+<div class="public-box-none">
+    <div class="uniform--container">
+            <a href="/"><span>Home</span></a>
+            <span class="uniform--gt">&gt;</span>
+        	<span class="">회원가입</span>
+            <span class="uniform--gt">&gt;</span>
+            <span class="uniform--now">가입완료</span>
+    </div>
+
+    <div class="join--title join--container">
+        <p class="keyColor">Yeonnam Space&nbsp;</p>
+        <p>회원가입</p>
+    </div>
+    <div class="join--body join--container">
+        <img src="/web/easyweb/image/icon_complete.png">
+        <p class="join--body-text1">회원가입 완료</p>
+        <p class="join--body-text2">연남스페이스 회원가입이 완료되었습니다. 로그인 후 모든 서비스를 이용할 수 있습니다.</p>
+        <div class="join--body-goToMain"><a href="/"><p>메인으로 가기</p></a></div>
+    </div>
+
+<!--<div module="member_joinComplete">-->
+    <!--@css(/css/module/member/joincomplete.css)-->
+    <!--<div class="joinComplete">
+        <h3><img src="//img.echosting.cafe24.com/skin/base_ko_KR/member/h3_join_complete.gif" alt="회원가입" /></h3>
+        <p class="desc">회원가입이 완료 되었습니다.</p>
+        <div class="ec-base-box typeMember gMessage">
+            <strong class="message">저희 쇼핑몰을 이용해 주셔서 감사합니다.</strong>
+            <div class="information">
+                <p class="thumbnail"><img src="{$group_image}" alt="{$group_name}" onerror="this.src='//img.echosting.cafe24.com/skin/base/member/img_member_default.gif';" /></p>
+                <div class="description">
+                    <dl class="ec-base-desc gBlank5">
+                        <dt>아이디</dt><dd>{$member_id}</dd>
+                        <dt>이름</dt><dd>{$member_name}</dd>
+                        <dt>이메일</dt><dd>{$member_email}</dd>
+                    </dl>
+                </div>
+            </div>
+        </div>
+        <div class="memberSpecial" module="member_BenefitJoin">
+            <p><strong>{$member_name} 님</strong>은 [{$group_name}] 회원이십니다.</p>
+            <p class="{$display_no_benefit|display}"><strong>{$dc_pay} {$dc_min_price}</strong> 구매시 <strong>{$dc_price}{$dc_type}</strong>을 {$use_dc} 받으실 수 있습니다. {$dc_max_percent}</p>
+            <p class="{$display_with_all|display}"><strong>{$dc_pay} {$dc_min_price_mileage}</strong> 구매시 <strong>{$dc_price_mileage}{$dc_type_mileage}</strong>을 {$use_dc_mileage} 받으실 수 있습니다. {$dc_max_mileage_percent}</p>
+        </div>
+        <p class="memberEmail {$display_email_auth|display}">이메일 주소로 발송된 인증 메일을 통해 인증하신 후에 로그인이 가능합니다.</p>
+        <p class="memberAge {$under_fourteen_display|display}">
+            <strong>{$member_name} 님</strong>은 14세 미만 회원이므로 <br />관리자 인증 후 아이디 사용이 가능합니다.
+        </p>
+        <div class="ec-base-button gBlank20">
+            <a href="/member/login.html" class="btnSubmitFix sizeM {$display_login_chk|display}">로그인</a>
+            <a href="{$redirect_function}" class="btnEmFix sizeM">완료</a>
+        </div>
+    </div>
+</div>
+
+<div module="coupon_join">-->
+    <!--@css(/css/module/coupon/join.css)-->
+    <!--<div class="couponSkinArea">
+        <ul class="grid3">
+            <li>
+                <div class="coupon {$background_class}" style="background-image:url('{$background_url}')">
+                    <strong class="title" style="color:#483b1b; font-family:Arial; font-size:11px;">{$coupon_name}</strong>
+                    <p class="discount" style="color:#d07b01; font-family:Dotum;"><span style="font-family:Verdana;">{$coupon_content}</span></p>
+                    <p class="period" style="color:#685219; font-family:Dotum;">{$coupon_period}</p>
+                </div>
+            </li>
+            <li>
+                <div class="coupon {$background_class}" style="background-image:url('{$background_url}')">
+                    <strong class="title" style="color:#483b1b; font-family:Arial; font-size:11px;">{$coupon_name}</strong>
+                    <p class="discount" style="color:#d07b01; font-family:Dotum;"><span style="font-family:Verdana;">{$coupon_content}</span></p>
+                    <p class="period" style="color:#685219; font-family:Dotum;">{$coupon_period}</p>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
+</div>-->
+<script>
+setTimeout(()=>{
+	$(".header--wrap").removeClass("white")
+	$(".header--wrap").addClass("black")
+})
+</script>
