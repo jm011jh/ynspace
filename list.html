@@ -1,6 +1,6 @@
 <!--@layout(/layout/basic/layout.html)-->
 <style>
-    .public--title-box{line-height: 1;width: 100%;max-width: 1400px;padding: 0 60px;margin:54px auto 0;}
+    .xans-product-menupackage.public--title-box{line-height: 1;width: 100%;max-width: 1400px;padding: 0 60px;margin:54px auto 0;}
     .public--title-box p:nth-child(1){font-size: 20px;font-weight: 600;letter-spacing: -0.5px;}
     .public--title-box p:nth-child(2){font-size: 48px;margin-top: 12px;font-weight: 600;letter-spacing: -1px;}
 
@@ -15,8 +15,8 @@
     .wish{display: none;}
     .company-name{font-size: 16px;font-weight: 600;margin-top: 20px;}
     .product-title{font-size: 20px ;font-weight: 600;margin:18px 0;}
-    .product-date-number{font-size: 14px;color: #8b8b8b;}
-    .product-date{font-size: 14px ;color: #000;font-weight: 600;}
+    .product-date-number{font-size: 14px;color: #8b8b8b;font-weight: 500;}
+    .product-date{font-size: 14px ;color: #000;font-weight: 500;}
     .xans-product-normalmenu{display:none;}
     .xans-product-menupackage{margin:0;}
 
@@ -24,6 +24,32 @@
     .list--class-boxWrap{width: 100%;max-width: 1400px;padding: 0 60px;margin:42px auto 0px;display: flex;}
     .list--class-boxWrap a{margin-right: 37px;padding: 18px 0;display: block;color: #8b8b8b;font-weight: 600;transform: translate(0,1.5px);}
     .list--class-boxWrap a.on-here{border-bottom: 2px solid #000;color: #000000;}
+    @media all and (max-width:767px){
+        .uniform--container{padding: 0 40px;padding-top: 130px;}
+        .xans-product-menupackage.public--title-box{padding: 0 40px;}
+
+        .list--class-boxWrap{padding: 0 40px;}
+        .list--wrap{padding: 0 40px;}
+        .list--list{width:calc(100%/3 - 20px/3);margin-bottom: 90px;}
+
+        .product-title{font-size: 18px;}
+        .company-name{font-size: 14px;}
+        .product-date,
+        .product-date-number{font-size: 13px;}
+    }
+    @media all and (max-width:480px){
+        .uniform--container{padding: 0 20px;padding-top: 130px;}
+        .xans-product-menupackage.public--title-box{padding: 0 20px;}
+
+        .list--class-boxWrap{padding: 0 20px;}
+        .list--wrap{padding: 0 20px;}
+        .list--list{width:calc(100%/2 - 10px/2);margin-bottom: 60px;}
+
+        .product-title{font-size: 16px;}
+        .company-name{font-size: 12px;}
+        .product-date,
+        .product-date-number{font-size: 11px;}
+    }
 </style>
 <div class="uniform--container">
     <a href="/"><span>Home</span></a>
@@ -172,13 +198,15 @@ setTimeout(()=>{
         $(this).after(yeonnam)
     })
     $(".product-title a>span").removeAttr("style");
-
-    var thisWhere = String($("#listWhere").text()).replace(" ","");
+    var thisWhereBefore = $("#listWhere").text()
+    var thisWhere = String(thisWhereBefore).replace(" ","");
     $(".list--class-boxWrap a").each(function(){
         var thisClassText = String($(this).text()).replace(" ","");
         if(thisClassText==thisWhere){
             $(this).addClass("on-here")
         }
     })
+    $("#listWhere").text("#" + thisWhereBefore)
+    $(".product-date-number").removeAttr("style");
 })
 </script>

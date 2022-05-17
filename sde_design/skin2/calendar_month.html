@@ -1,0 +1,126 @@
+<!--@layout(/layout/basic/layout.html)-->
+<style>
+    .anno--container{margin-top: 120px;}
+    .public--wrap{width: 100%;max-width: 1400px;margin-left: auto;margin-right: auto;padding: 0 60px;}
+    .anno--uniform{display: flex;justify-content: flex-end;}
+    .uniform--container{display: flex;color: #8b8b8b;}
+    .uniform--container a{color: #8b8b8b;}
+    .uniform--container .uniform--now{color: #ff7f30;}
+    .uniform--gt{display: block;margin: 0 8px;}
+
+    .anno--head{border-bottom: 1px solid #dbdbdb;width: 100%;}
+    .anno--title{margin-top: 64px;}
+    .anno--title-text1{font-size: 20px;letter-spacing: -0.3px;font-weight: 600;}
+    .anno--title-text2{margin-top: 24px;font-size: 48px;letter-spacing: -0.5px;font-weight: 800;}
+    .anno--list-wrap{display: flex;margin-top: 42px;}
+    .anno--list-wrap a{padding: 18px 0;margin-right: 40px;display: block;color: #8b8b8b;transform: translate(0,1.5px);font-weight: 600;}
+    .anno--list-wrap a.on-here{border-bottom: 2px solid #000;color: #000000;}
+    .anno--calendar{width:100%;max-width:1400px;padding:0 60px;margin:60px auto 180px;}
+    @media all and (max-width:767px){
+        .anno--calendar{width:100%;max-width:1400px;padding:0 40px;margin:40px auto 120px;}
+    }
+    @media all and (max-width:480px){
+        .anno--calendar{width:100%;max-width:1400px;padding:0 20px;margin:30px auto 190px;}
+    }
+</style>
+<div class="anno--container">
+    <div class="anno--head">
+        <div class="anno--uniform public--wrap">
+            <div class="uniform--container">
+                <a href="/"><span>Home</span></a>
+                <span class="uniform--gt">&gt;</span>
+                <span class="">대관안내</span>
+                <span class="uniform--gt">&gt;</span>
+                <span class="uniform--now">대관스케쥴</span>
+            </div>
+        </div>
+        <div class="anno--title public--wrap">
+            <div class="anno--title-text1"><p>#대관신청</p></div>
+            <div class="anno--title-text2"><p>대관안내</p></div>
+        </div>
+        <div class="anno--list-wrap public--wrap">
+            <div class="anno--list"><a class="" href="/announcement_how.html">대관안내</a></div>
+            <div class="anno--list"><a class="on-here" href="/announcement_schedule.html">대관스케쥴</a></div>
+            <div class="anno--list"><a class="" href="/announcement_ask.html">대관문의</a></div>
+        </div>
+    </div>
+<div module="Calendar_Monthpackage" class="anno--calendar">
+    <!--@css(/css/module/calendar/monthpackage.css)-->
+    <div class="ec-base-tab">
+        <ul class="menu">
+            <li><a href="/calendar/calendar_day.html">일간</a></li>
+            <li><a href="/calendar/calendar_week.html">주간</a></li>
+            <li class="selected"><a href="/calendar/calendar_month.html">월간</a></li>
+        </ul>
+        <span class="right"><a href="/calendar/calendar_field.html" class="btnNormal">추가정보</a></span>
+    </div>
+
+    <div module="Calendar_HeadMonth">
+        <!--
+            $calendar_write_url = calendar_write.html
+         -->
+        <p class="date">
+            <a href="#none" onclick="{$action_prev_month}"><img src="//img.echosting.cafe24.com/skin/base/calendar/btn_date_prev.gif" alt="이전" /></a>
+            <span class="day">{$current_year}.{$current_month}</span>
+            <a href="#none" onclick="{$action_next_month}"><img src="//img.echosting.cafe24.com/skin/base/calendar/btn_date_next.gif" alt="다음" /></a>
+            <a href="#none" class="btnNormal" onclick="{$action_today}">오늘</a>
+        </p>
+        <p class="button"><a href="#none" onclick="{$action_write}" class="btnSubmitFix sizeS {$write_display|display}">글쓰기</a></p>
+    </div>
+
+    <div module="Calendar_Category">{$form.category_no}</div>
+
+    <div module="Calendar_ListMonth">
+        <!--
+            $calendar_view_url = calendar_view.html
+            $is_new_version = true
+            $login_page_url = /member/login.html
+         -->
+        <table border="1" summary="">
+            <caption>캘린더 월간형</caption>
+            <colgroup>
+                <col style="width:15%;" />
+                <col style="width:14%;" />
+                <col style="width:14%;" />
+                <col style="width:14%;" />
+                <col style="width:14%;" />
+                <col style="width:14%;" />
+                <col style="width:15%;" />
+            </colgroup>
+            <thead>
+                <tr>
+                    <th scope="col" class="sun">SUN</th>
+                    <th scope="col">MON</th>
+                    <th scope="col">TUE</th>
+                    <th scope="col">WED</th>
+                    <th scope="col">THU</th>
+                    <th scope="col">FRI</th>
+                    <th scope="col" class="sat"><span>SAT</span></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr module="Calendar_Week">
+                     <td module="Calendar_Day" onclick="{$action_select}" id="{$day_div_id}" class="cal_day">
+                        <div class="day {$today.class}">
+                            <p>
+                                <span class="day {$day.class}">{$day}</span>
+                                <a href="#none" onclick="{$action_view}" class="count {$content_count.class|display}">{$content_count}개</a>
+                            </p>
+                            <ul module="Calendar_List">
+                                <li><a href="#none" onclick="{$action_list_view}">{$list_title|cut:8,...}</a></li>
+                                <li><a href="#none" onclick="{$action_list_view}">{$list_title|cut:8,...}</a></li>
+                            </ul>
+                        </div>
+                    </td>
+                </tr>
+              </tbody>
+        </table>
+    </div>
+</div>
+</div>
+<script>
+    setTimeout(() => {
+        $(".header--wrap").removeClass("white")
+        $(".header--wrap").addClass("black")
+    })
+</script>

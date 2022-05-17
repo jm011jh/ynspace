@@ -1,4 +1,12 @@
 $(window).ready(function(){
-    $.get(`/sde_design/skin2/inc/header.html`,(data)=>{$("#header").prepend(data)})
-    $.get(`/sde_design/skin2/inc/footer.html`,(data)=>{$("#footer").prepend(data)})
+    var headerHamSW = 0;
+    $("#headerHamBtn").click(function(){
+        if(headerHamSW == 0){
+            headerHamSW = 1;
+            $(".header--menu-mob").addClass('on')
+        }else if(headerHamSW == 1){
+            headerHamSW = 0;
+            $(".header--menu-mob").removeClass('on')
+        }
+    })
 })

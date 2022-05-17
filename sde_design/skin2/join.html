@@ -11,6 +11,7 @@
     <h2>회원 가입</h2>
 </div>-->
 <style>
+    .join--wrap{margin-top: 54px;margin-bottom: 180px;}
     .uniform--container{padding:0 60px;;max-width:1400px;margin:auto;width: 100%;display: flex;justify-content: flex-end;padding-top:130px;}
     .uniform--container span{color: #8b8b8b;}
     .uniform--container span.uniform--now{color: #ff7f30;letter-spacing: -0.35px;}
@@ -37,7 +38,9 @@
 
     .xans-member-join .ec-base-box + .ec-base-box{margin-top:0;}
     .ec-base-table img{vertical-align: top;}
-
+    @media all and (max-width:480px){
+        .join--button-end a{padding: 18px 0;font-size: 14px;}
+    }
 </style>
     <div class="uniform--container">
             <a href="/"><span>Home</span></a>
@@ -46,7 +49,7 @@
             <span class="uniform--gt">&gt;</span>
             <span class="uniform--now">정보입력</span>
     </div>
-<div module="member_join" class="public-box">
+<div module="member_join" class="join--wrap">
 <div class="public-wrap">
 <div class="join--container">
     <!--@css(/css/module/member/join.css)-->

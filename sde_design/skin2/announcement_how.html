@@ -1,0 +1,183 @@
+<!--@layout(/layout/basic/layout.html)-->
+<style>
+    .anno--container{margin-top: 130px;}
+    .public--wrap{width: 100%;max-width: 1400px;margin-left: auto;margin-right: auto;padding: 0 60px;}
+    .anno--uniform{display: flex;justify-content: flex-end;}
+    .uniform--container{display: flex;color: #8b8b8b;}
+    .uniform--container a{color: #8b8b8b;}
+    .uniform--container .uniform--now{color: #ff7f30;}
+    .uniform--gt{display: block;margin: 0 8px;}
+
+    .anno--head{border-bottom: 1px solid #dbdbdb;width: 100%;}
+    .anno--title{margin-top: 64px;}
+    .anno--title-text1{font-size: 20px;letter-spacing: -0.3px;font-weight: 600;}
+    .anno--title-text2{margin-top: 24px;font-size: 48px;letter-spacing: -0.5px;font-weight: 600;}
+    .anno--list-wrap{display: flex;margin-top: 42px;}
+    .anno--list-wrap a{padding: 18px 0;margin-right: 40px;display: block;color: #8b8b8b;transform: translate(0,2px);font-weight: 600;}
+    .anno--list-wrap a.on-here{border-bottom: 3px solid #000;color: #000000;}
+
+    .anno--body{padding-top: 60px;margin-bottom: 162px;}
+    .anno--swiper{position: relative;}
+    .anno--swiper .swiper-button-prev,
+    .anno--swiper .swiper-button-next{opacity: 1;--swiper-theme-color:#cccccc;}
+    .swiper-button-next:after, .swiper-button-prev:after{font-size: 24px;}
+    .swiper-slide{background-size: cover;background-position: center center;padding-top: 30%;}
+
+    .swiper{position: relative;}
+    .anno--swiper-info{position: absolute;bottom: 0;left: 0;background-color: rgba(0,0,0,0.5);color: #ffffff;font-weight: 600;font-size: 14px;display: flex;z-index: 2;width: 100%;padding: 30px 28px;align-items: center;}
+    .anno--swiper-info p{margin-right: 28px;}
+    .anno--swiper-info b{font-weight: 500;font-size: 16px;}
+
+    .anno--information{display: flex;margin-top: 74px;}
+    .anno--information-title{font-size: 32px;font-weight: 800;width: 30%;}
+    .anno--information-body{width: 70%;}
+    .anno--information-row1{margin-bottom: 33px;font-size: 20px;font-weight: 600;}
+    .anno--information-row2{font-size: 16px;padding-bottom: 60px;border-bottom: 1px solid #8b8b8b;}
+    .anno--information-row2-row{display: flex;align-items: center;margin-bottom: 8px;}
+    .anno--information-row2-num{font-size: 13px;color: #fff;width:24px;height: 24px;background-color: #000000;border-radius: 50%;display: flex;justify-content: center;align-items: center;margin-right: 12px;}
+
+    .anno--information-row3{padding: 40px 0 60px;}
+    .anno--information-row3-text1{font-size: 20px;font-weight: 600;}
+    .anno--information-row3-text2{font-size: 16px;margin-top: 30px;}
+    .anno--information-row3-text3{font-size: 14px;color: #8b8b8b;margin-top: 14px;}
+    
+    .anno--information-row4{padding: 40px 0 0px;}
+    .anno--information-row4-text1{font-size: 20px;font-weight: 600;}
+    .anno--information-row4-buttonWrap{max-width:860px;margin-top: 28px;width: 100%;}
+    .anno--information-row4-button {display: inline-block;min-width:180px;width: 24%;max-width: 190px;margin-bottom: 18px;margin-right: 10px;}
+    .anno--information-row4-button a{display: flex;border: 1px solid #000;padding: 20px 0px;width: 100%;justify-content: center;font-size: 15px;font-weight: 600;}
+    .anno--information-row4-button a img{margin-right: 22px;}
+    .anno--information-row4-button a p{letter-spacing: -0.5px;}
+</style>
+<div class="anno--container">
+    <div class="anno--head">
+        <div class="anno--uniform public--wrap">
+            <div class="uniform--container">
+                <a href="/"><span>Home</span></a>
+                <span class="uniform--gt">&gt;</span>
+                <span class="">대관안내</span>
+                <span class="uniform--gt">&gt;</span>
+                <span class="uniform--now">대관신청</span>
+            </div>
+        </div>
+        <div class="anno--title public--wrap">
+            <div class="anno--title-text1"><p>#대관신청</p></div>
+            <div class="anno--title-text2"><p>대관안내</p></div>
+        </div>
+        <div class="anno--list-wrap public--wrap">
+            <div class="anno--list"><a class="on-here" href="/announcement_how.html">대관안내</a></div>
+            <div class="anno--list"><a class="" href="/announcement_schedule.html">대관스케쥴</a></div>
+            <div class="anno--list"><a class="" href="/announcement_ask.html">대관문의</a></div>
+        </div>
+    </div>
+    <div class="anno--body public--wrap">
+        <div class="anno--swiper">
+                <div class="swiper mySwiper2">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide" style="background-image: url(/web/easyweb/image/main_bg1.jpg);"></div>
+                        <div class="swiper-slide" style="background-image: url(/web/easyweb/image/main_bg2.jpg);"></div>
+                        <div class="swiper-slide" style="background-image: url(/web/easyweb/image/main_bg3.jpg);"></div>
+                        <div class="swiper-slide" style="background-image: url(/web/easyweb/image/main_bg4.jpg);"></div>
+                        <div class="swiper-slide" style="background-image: url(/web/easyweb/image/main_bg5.jpg);"></div>
+                        <div class="swiper-slide" style="background-image: url(/web/easyweb/image/main_bg6.jpg);"></div>
+                        <div class="swiper-slide" style="background-image: url(/web/easyweb/image/main_bg7.jpg);"></div>
+                        <div class="swiper-slide" style="background-image: url(/web/easyweb/image/main_bg8.jpg);"></div>
+                        <div class="swiper-slide" style="background-image: url(/web/easyweb/image/main_bg9.jpg);"></div>
+                        <div class="swiper-slide" style="background-image: url(/web/easyweb/image/main_bg10.jpg);"></div>
+                        <div class="swiper-slide" style="background-image: url(/web/easyweb/image/main_bg11.jpg);"></div>
+                        <div class="swiper-slide" style="background-image: url(/web/easyweb/image/main_bg12.jpg);"></div>
+                        <div class="swiper-slide" style="background-image: url(/web/easyweb/image/main_bg13.jpg);"></div>
+                        <div class="swiper-slide" style="background-image: url(/web/easyweb/image/main_bg14.jpg);"></div>
+                        <div class="swiper-slide" style="background-image: url(/web/easyweb/image/main_bg15.jpg);"></div>
+                        <div class="swiper-slide" style="background-image: url(/web/easyweb/image/main_bg16.jpg);"></div>
+                        <div class="swiper-slide" style="background-image: url(/web/easyweb/image/main_bg17.jpg);"></div>
+                        <div class="swiper-slide" style="background-image: url(/web/easyweb/image/main_bg18.jpg);"></div>
+                        <div class="swiper-slide" style="background-image: url(/web/easyweb/image/main_bg19.jpg);"></div>
+                        <div class="swiper-slide" style="background-image: url(/web/easyweb/image/main_bg20.jpg);"></div>
+                        <div class="swiper-slide" style="background-image: url(/web/easyweb/image/main_bg21.jpg);"></div>
+                        <div class="swiper-slide" style="background-image: url(/web/easyweb/image/main_bg22.jpg);"></div>
+                        <div class="swiper-slide" style="background-image: url(/web/easyweb/image/main_bg23.jpg);"></div>
+                        <div class="swiper-slide" style="background-image: url(/web/easyweb/image/main_bg24.jpg);"></div>
+                    </div>
+                </div>
+                <div class="swiper--button-wrap">
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+                </div>
+                <div class="anno--swiper-info">
+                    <p>접수/문의</p>
+                    <p>연남스페이스 <b>0507.1337.1701</b></p>
+                    <p>dannyson0830@gmail.com</p>
+                </div>
+        </div>
+        <div class="anno--information">
+            <div class="anno--information-title"><p>대관안내</p></div>
+            <div class="anno--information-body">
+                <div class="anno--information-row1"><p>대관신청 절차</p></div>
+                <div class="anno--information-row2">
+                    <div class="anno--information-row2-row">
+                        <div class="anno--information-row2-num"><p>1</p></div>
+                        <div class="anno--information-row2-text"><p>전화 및 e-mail 문의</p></div>
+                    </div>
+                    <div class="anno--information-row2-row">
+                        <div class="anno--information-row2-num"><p>2</p></div>
+                        <div class="anno--information-row2-text"><p>대관신청서 작성 및 접수</p></div>
+                    </div>
+                    <div class="anno--information-row2-row">
+                        <div class="anno--information-row2-num"><p>3</p></div>
+                        <div class="anno--information-row2-text"><p>대관신청 승인</p></div>
+                    </div>
+                    <div class="anno--information-row2-row">
+                        <div class="anno--information-row2-num"><p>4</p></div>
+                        <div class="anno--information-row2-text"><p>계약서 작성 및 계약금 입금</p></div>
+                    </div>
+                    <div class="anno--information-row2-row">
+                        <div class="anno--information-row2-num"><p>5</p></div>
+                        <div class="anno--information-row2-text"><p>대관료 결재</p></div>
+                    </div>
+                    <div class="anno--information-row2-row">
+                        <div class="anno--information-row2-num"><p>6</p></div>
+                        <div class="anno--information-row2-text"><p>대관행사진행</p></div>
+                    </div>
+                </div>
+                <div class="anno--information-row3">
+                    <p class="anno--information-row3-text1">대관료</p>
+                    <p class="anno--information-row3-text2">2022년 11월 30일까지 주중 주말관계없이 오픈기념 특별할인 1,000,000원  (10시~22시)</p>
+                    <p class="anno--information-row3-text3">* 모든 대관료는 VAT별도</p>
+                </div>
+                <div class="anno--information-row4">
+                    <p class="anno--information-row4-text1">대관관련 문서</p>
+                    <div class="anno--information-row4-buttonWrap">
+                        <div class="anno--information-row4-button">
+                            <a href=""><img src="/web/easyweb/image/icon_download_black.png" alt=""><p>대관 신청서</p></a>
+                        </div>
+                        <div class="anno--information-row4-button">
+                            <a href=""><img src="/web/easyweb/image/icon_download_black.png" alt=""><p>표준 계약서</p></a>
+                        </div>
+                        <div class="anno--information-row4-button">
+                            <a href=""><img src="/web/easyweb/image/icon_download_black.png" alt=""><p>대관시 유의사항</p></a>
+                        </div>
+                        <div class="anno--information-row4-button">
+                            <a href=""><img src="/web/easyweb/image/icon_download_black.png" alt=""><p>보유장비 리스트</p></a>
+                        </div>
+                        <div class="anno--information-row4-button">
+                            <a href=""><img src="/web/easyweb/image/icon_download_black.png" alt=""><p>평면도 및 입면도</p></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    setTimeout(() => {
+        $(".header--wrap").removeClass("white")
+        $(".header--wrap").addClass("black")
+        var swiper = new Swiper(".mySwiper2",{
+            navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+        })
+    })
+</script>

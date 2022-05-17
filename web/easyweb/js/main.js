@@ -33,12 +33,16 @@ $(window).ready(function () {
     var s2circleBoxTop = s2circleBox.offset().top
     var s1slideLength = $(".section1--slide-thumb-list").length - 1;
     var s1slideNum = 0;
+    var s3top = $("#section3").offset().top
     var winH = $(window).height();
+    var headerH = $("#header").innerHeight();
     var scrollTop;
     $(window).resize(function () {
         s2textBoxTop = s2textBox.offset().top
         winH = $(window).height();
-        scrollTop;
+        headerH = $("#header").innerHeight();
+        s3top = $("#section3").offset().top
+        scrollTop = $(window).scrollTop();
     })
     $(window).scroll(function () {
         scrollTop = $(window).scrollTop();
@@ -49,6 +53,13 @@ $(window).ready(function () {
             s2circleBox.addClass("on-view")
         }
 
+        if(scrollTop>s3top-headerH){
+            $(".header--wrap").removeClass("white")
+            $(".header--wrap").addClass("black")
+        }else{
+            $(".header--wrap").removeClass("black")
+            $(".header--wrap").addClass("white")
+        }
     })
     function s1slideNumReturn() {
         if (s1slideNum > s1slideLength) {
