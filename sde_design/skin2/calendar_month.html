@@ -1,7 +1,7 @@
 <!--@layout(/layout/basic/layout.html)-->
 <style>
-    .anno--container{margin-top: 120px;}
-    .public--wrap{width: 100%;max-width: 1400px;margin-left: auto;margin-right: auto;padding: 0 60px;}
+    .anno--container{margin-top: 130px;margin-bottom:180px;}
+    .public--wrap{width: 100%;max-width: 1400px;margin-left: auto;margin-right: auto;padding: 0 60px;margin-top:60px;}
     .anno--uniform{display: flex;justify-content: flex-end;}
     .uniform--container{display: flex;color: #8b8b8b;}
     .uniform--container a{color: #8b8b8b;}
@@ -9,13 +9,16 @@
     .uniform--gt{display: block;margin: 0 8px;}
 
     .anno--head{border-bottom: 1px solid #dbdbdb;width: 100%;}
-    .anno--title{margin-top: 64px;}
+    .anno--title{margin-top: 64px;line-height:1;}
     .anno--title-text1{font-size: 20px;letter-spacing: -0.3px;font-weight: 600;}
-    .anno--title-text2{margin-top: 24px;font-size: 48px;letter-spacing: -0.5px;font-weight: 800;}
+    .anno--title-text2{margin-top: 24px;font-size: 48px;letter-spacing: -0.5px;font-weight: 600;}
     .anno--list-wrap{display: flex;margin-top: 42px;}
-    .anno--list-wrap a{padding: 18px 0;margin-right: 40px;display: block;color: #8b8b8b;transform: translate(0,1.5px);font-weight: 600;}
-    .anno--list-wrap a.on-here{border-bottom: 2px solid #000;color: #000000;}
+    .anno--list-wrap a{padding: 18px 0;margin-right: 40px;display: block;color: #8b8b8b;transform: translate(0,2px);font-weight: 600;}
+    .anno--list-wrap a.on-here{border-bottom: 3px solid #000;color: #000000;}
     .anno--calendar{width:100%;max-width:1400px;padding:0 60px;margin:60px auto 180px;}
+    .ec-base-tab .menu{display: flex;justify-content: flex-start;}
+    .ec-base-tab .menu li{float:unset;width: calc(100%/3);max-width:140px;}
+    .ec-base-tab .menu li a{width: unset;min-width:unset;max-width:unset}
     @media all and (max-width:767px){
         .anno--calendar{width:100%;max-width:1400px;padding:0 40px;margin:40px auto 120px;}
     }
@@ -52,7 +55,7 @@
             <li><a href="/calendar/calendar_week.html">주간</a></li>
             <li class="selected"><a href="/calendar/calendar_month.html">월간</a></li>
         </ul>
-        <span class="right"><a href="/calendar/calendar_field.html" class="btnNormal">추가정보</a></span>
+        <!-- <span class="right"><a href="/calendar/calendar_field.html" class="btnNormal">추가정보</a></span> -->
     </div>
 
     <div module="Calendar_HeadMonth">

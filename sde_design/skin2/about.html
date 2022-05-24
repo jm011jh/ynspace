@@ -1,33 +1,53 @@
 <!--@layout(/layout/basic/layout.html)-->
 <style>
+    @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
     *{margin: 0;padding: 0;box-sizing: border-box;}
     .about--container{width: 100%;max-width: 1400px;margin: auto;padding-left:60px;padding-right:60px;}
     .uniform--container{width: 100%;display: flex;justify-content: flex-end;padding-top:130px;}
     .uniform--container span{color: #8b8b8b;}
-    .uniform--container span.uniform--now{color: #ff7f30;letter-spacing: -0.35px;}
-    .uniform--gt{margin: 0 4px 0 8px;}
+    .uniform--container span.uniform--now{color: #ff7f30;letter-spacing: -1px;}
+    .uniform--gt{margin: 0 8px;}
 
-    .about--section1{margin-top: 140px;position: relative;text-align: center;padding-bottom: 180px;}
+    .about--section1{margin-top: 140px;position: relative;text-align: center;padding-bottom: 210px;}
     .about--section1-bg{position: absolute;width: 100%;height: 100%;display: flex;flex-direction: column;justify-content: flex-end;}
     .about--section1-bg img{width: 100%;}
     .about--section1-container{padding:0 60px;position: relative;}
-    .about--section1-text1{margin-bottom: 30px;font-size: 20px;font-weight: 600;line-height: 1;letter-spacing: -0.3px;}
+    .about--section1-text1{margin-bottom: 10px;font-size: 20px;font-weight: 700;line-height: 1;letter-spacing: -1px;opacity:0;transition-duration:0.6s;}
+    .init .about--section1-text1{opacity:1;}
     .about--section1-text2{margin-bottom: 68px;font-size: 120px;font-weight: 500;font-family: 'Playfair Display' !important;}
+    .about--section1-text2 p{opacity:0;transition-duration:0.6s;}
+    
+    .about--section1-text2 p:nth-child(1){transform:translate(20px,0)}
+    .init .about--section1-text2 p:nth-child(1){transform:translate(0,0);opacity:1;}
+    .about--section1-text2 p:nth-child(2){transform:translate(-20px,0)}
+    .init .about--section1-text2 p:nth-child(2){transform:translate(0,0);opacity:1;}
+    .about--section1-text2 p:nth-child(3){transform:translate(20px,0)}
+    .init .about--section1-text2 p:nth-child(3){transform:translate(0,0);opacity:1;}
+    
     .about--section1-text2 p{display: flex;justify-content: center;}
     .about--section1-text2 p span{display: block;line-height: 1;}
     .about--section1-text2 p:nth-child(1){font-style: italic;}
     .about--section1-text2 p:nth-child(3){font-style: italic;}
-    .about--section1-text3{margin-bottom: 24px;font-size: 20px;font-weight: 600;letter-spacing: -0.3px;word-break:keep-all;line-height:1.3;}
-    .about--section1-text4{margin-bottom:120px;font-size: 16px;font-weight: 400;letter-spacing: -0.3px;word-break:keep-all;line-height:1.3;width: 100%;max-width: 495px;margin-left: auto;margin-right: auto;}
-
-    .about--section2{margin-top: 180px;}
+    .about--section1-text3{margin-bottom: 12px;font-size: 20px;font-weight: 500;letter-spacing: -1px;word-break:keep-all;line-height:1.3;opacity:0;transition-duration:0.6s;transform:translate(0,20px)}
+    .init .about--section1-text3{opacity:1;transform:translate(0,0)}
+    .about--section1-text4{margin-bottom:110px;font-size: 16px;font-weight: 400;letter-spacing: -1px;word-break:keep-all;line-height:1.3;width: 100%;max-width: 495px;margin-left: auto;margin-right: auto;line-height:1.66;opacity:0;transition-duration:0.6s;transform:translate(0,20px)}
+    .init .about--section1-text4{opacity:1;transform:translate(0,0)}
+    .about--section1-scroll{width: 10px;height: 10px;position: relative;margin: auto;}
+    .about--section1-scroll span{width: 100%;height: 100%;position: absolute;left: 50%;display: block;}
+    .about--section1-scroll span:nth-child(1){border-bottom: 2px solid #8b8b8b;border-right: 2px solid #8b8b8b;transform: translate(-50%,0%) rotate(45deg);top: 0;animation: blink 0.6s 0s infinite alternate;}
+    .about--section1-scroll span:nth-child(2){border-bottom: 2px solid #000;border-right: 2px solid #000;transform: translate(-50%,0%) rotate(45deg);top: 7px;animation: blink 0.6s 0.2s infinite alternate;}
+    @keyframes blink{
+        0%{opacity: 1;}
+        100%{opacity: 0;}
+    }
+    .about--section2{margin-top: 170px;}
     .about--section2-textBox{width: 100%;max-width: 1192px;display: flex;justify-content: space-between;}
     .about--section2-textBox p{width: 50%;word-break: keep-all;}
-    .about--section2-textBox p:nth-child(1){max-width: 495px;font-size: 32px;line-height: 1.3;font-weight: 600;margin-right:12px;}
-    .about--section2-textBox p:nth-child(2){max-width: 560px;font-size: 16px;line-height: 1.66;letter-spacing: -0.3px;}
+    .about--section2-textBox p:nth-child(1){max-width: 495px;font-size: 32px;line-height: 1.3;font-weight: 600;margin-right:12px;letter-spacing:-1px;}
+    .about--section2-textBox p:nth-child(2){max-width: 560px;font-size: 16px;line-height: 1.66;letter-spacing: -1px;}
 
     .about--section3{overflow:hidden;margin-top:160px;}
-    .about--section3-wrap{max-width:1280px;margin:auto;}
+    .about--section3-wrap{max-width:unset;margin:auto;}
     .about--section3 .swiper{overflow:unset;}
     .about--section3 .swiper-slide{width:738px;}
     .about--section3 .slide-image img{width:100%;display:block;}
@@ -36,10 +56,11 @@
     .about--section4{margin-top: 160px;}
     .about--section4-text{text-align: center;margin-bottom: 40px;}
     .about--section4-text p{line-height: 1;}
-    .about--section4-text p:nth-child(1){margin-bottom: 24px;font-size: 20px;font-weight: 600;}
+    .about--section4-text p:nth-child(1){margin-bottom: 20px;font-size: 20px;font-weight: 700;letter-spacing:-1px;}
     .about--section4-text p:nth-child(2){font-size: 48px;font-weight: 600;font-family: 'Playfair Display' !important;}
 
     .about--section4-map-api{margin-bottom: 40px;}
+    .about--section4-map-api iframe{width:100%;}
     .about--section4-map-link{display: flex;justify-content: center;margin-bottom: 100px;}
     .about--section4-social:nth-child(1){margin-right: 10px;}
     .about--section4-social a{display: flex;padding: 20px 26px;font-weight:600;font-size: 16px;}
@@ -59,17 +80,18 @@
 
     .about--section4-map-guide{margin-bottom: 180px;display:flex;justify-content: space-between;word-break: keep-all;}
     .about--section4-map-guideBox{width:calc(50% - 10px)}
-    .about--section4-map-guideBox-row{margin-bottom: 26px;}
+    .about--section4-map-guideBox-row{margin-bottom: 22px;}
     .about--section4-map-guideBox-row:last-child{margin-bottom: 0;}
-    .about--section4-map-guideBox-text1{margin-bottom:18px;font-size: 18px;font-weight: 600;}
+    .about--section4-map-guideBox-text1{margin-bottom:10px;font-size: 18px;font-weight: 600;}
     .about--section4-map-guideBox-text1.bustrain-bottom{margin-bottom: 14px;}
     .about--section4-map-guideBox-text1.train-bottom{margin-bottom: 12px;}
-    .about--section4-map-guideBox-text2{font-size: 16px;display: flex;align-items: center;}
+    .about--section4-map-guideBox-text2{font-size: 16px;display: flex;align-items: center;line-height:1.6;letter-spacing:-1px;word-break:keep-all;}
+    .about--section4-map-guideBox-text2.about-gray{letter-spacing:0px;}
     .about-gray{color: #8b8b8b;}
     .bolding{font-weight: 600;}
     .about--section4-map-guide span{display: block;margin-right: 6px;}
-    .about--section4-map-guide span.bus{padding: 2px 4px;color: #ffffff;background-color: #72ad3f;font-size: 13px;}
-    .about--section4-map-guide span.train{padding: 4px 10px;color: #ffffff;background-color: #33a23d;border-radius: 50%;}
+    .about--section4-map-guide span.bus{padding: 0px 8px;color: #ffffff;background-color: #72ad3f;font-size: 13px;}
+    .about--section4-map-guide span.train{padding: 1px 8px;color: #ffffff;background-color: #33a23d;border-radius: 50%;font-size:13px;}
     @media all and (max-width:1024px){
         .about--section1-text2{font-size: 100px;}
         .about--section2-textBox{flex-direction: column;}
@@ -81,6 +103,7 @@
     }
     @media all and (max-width:767px){
         .about--container{padding-left:40px;padding-right:40px;}
+        .about--section1-container{padding: 0 40px;}
         .about--section1-text2{font-size: 80px;}
         .about--section2-textBox p:nth-child(1){font-size:24px;}
 
@@ -88,15 +111,24 @@
 
         .about--section4-map-guideBox-text1{font-size: 16px;margin-bottom: 16px;}
         .about--section4-map-guideBox-text2{font-size: 14px;}
+        
+        .about--section4-map-link{flex-direction:column;}
+        .about--section4-social{max-width:320px;margin: 14px auto 0 auto;}
+        .about--section4-social:nth-child(1){margin-right:auto;}
     }
     @media all and (max-width:480px){
+        .about--section1-container{padding: 0 20px;}
         .about--container{padding-left:20px;padding-right:20px;}
         .about--section1-text2{font-size: 72px;}
+        .about--section1-text3{font-size:18px;}
+        .about--section1-text4{font-size:14px;}
+        
         .about--section2-textBox p:nth-child(1){font-size:18px;}
         .about--section2-textBox p:nth-child(2){font-size:14px;}
 
         .about--section3 .swiper-slide{width:240px;}
 
+	    .about--section4-map-guideBox-row:last-child{margin-bottom: 16px;}
         .about--section4-map-guide{display: block;}
         .about--section4-map-guideBox{width: 100%;}
     }
@@ -120,7 +152,10 @@
                 </div>
                 <div class="about--section1-text3"><p>연남동 문화 중심의 소극장으로 자리잡고 있습니다.</p></div>
                 <div class="about--section1-text4"><p>연남동의 새로운 문화트랜드 중심지 연트럴파크와 인접한 공연 문화 콘텐츠를 온몸으로 느낄 수 있는 새로운 공간 연남스페이스</p></div>
-                <div class="about--section1-scroll"><img src="/web/easyweb/image/icon_scroll.png" alt=""></div>
+                <div class="about--section1-scroll">
+                <span></span>
+                <span></span>
+                </div>
             </div>
     </div>
     <div class="about--section2 about--container">
@@ -134,32 +169,40 @@
             <div class="swiper about--section3-swiper">
                 <div class="swiper-wrapper">
                   <div class="swiper-slide">
-                      <div class="slide-image"><img src="/web/easyweb/image/about_slide1.png" alt=""></div>
+                      <div class="slide-image"><img src="/web/easyweb/image/main_bg1.jpg" alt=""></div>
                   </div>
                   <div class="swiper-slide">
-                      <div class="slide-image"><img src="/web/easyweb/image/about_slide2.png" alt=""></div>
+                      <div class="slide-image"><img src="/web/easyweb/image/main_bg2.jpg" alt=""></div>
                   </div>
                   <div class="swiper-slide">
-                      <div class="slide-image"><img src="/web/easyweb/image/about_slide3.png" alt=""></div>
+                      <div class="slide-image"><img src="/web/easyweb/image/main_bg3.jpg" alt=""></div>
                   </div>
                   <div class="swiper-slide">
-                      <div class="slide-image"><img src="/web/easyweb/image/about_slide4.png" alt=""></div>
+                      <div class="slide-image"><img src="/web/easyweb/image/main_bg4.jpg" alt=""></div>
+                  </div>
+                  <div class="swiper-slide">
+                      <div class="slide-image"><img src="/web/easyweb/image/main_bg5.jpg" alt=""></div>
+                  </div>
+                  <div class="swiper-slide">
+                      <div class="slide-image"><img src="/web/easyweb/image/main_bg6.jpg" alt=""></div>
                   </div>
                 </div>
             </div>
         </div>
-        <div class="swiper-scrollbar"></div>
+        <!-- <div class="swiper-scrollbar"></div> -->
 		
     </div>
     <div class="about--section4 about--container">
         <div class="about--section4-text">
-            <p>연남스페이스 위치 안내</p>
+            <p>#연남스페이스 위치 안내</p>
             <p>Location</p>
         </div>
-        <div class="about--section4-map-api">MAP HERE</div>
+        <div class="about--section4-map-api">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1101.253017019862!2d126.92057669939011!3d37.56205121627263!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357c98e636aa4703%3A0xfb415aff9a4cc545!2s16%20Seongmisan-ro%2022-gil%2C%20Mapo-gu%2C%20Seoul!5e0!3m2!1sen!2skr!4v1652939774675!5m2!1sen!2skr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
         <div class="about--section4-map-link">
             <div class="about--section4-naver about--section4-social">
-                <a href="" target="blank">
+                <a href="http://naver.me/5NYgb83r" target="blank">
                 <p>네이버 지도보기</p>
                 <div class="about--section4-arrow-w">
                 <div class="about--section4-arrow">
@@ -170,7 +213,7 @@
                 </a>
             </div>
             <div class="about--section4-kakao about--section4-social">
-                <a href="" target="blank">
+                <a href="https://place.map.kakao.com/667878863" target="blank">
                 <p>카카오 지도보기</p>
                 <div class="about--section4-arrow-w">
                 <div class="about--section4-arrow">
@@ -218,11 +261,15 @@ setTimeout(()=>{
 	$(".header--wrap").removeClass("white")
 	$(".header--wrap").addClass("black")
 })
+setTimeout(()=>{
+    $(".about--section1-container").addClass("init")
+},100)
     var swiper = new Swiper(".about--section3-swiper", {
         scrollable:false,
         slidesPerView: "auto",
-        centeredSlides: false,
+        centeredSlides: true,
         spaceBetween: 20,
+        loop : true,
         pagination: {
             el: ".swiper-pagination",
             type: "fraction",
@@ -232,10 +279,5 @@ setTimeout(()=>{
           draggable: true,
           dragSize:212,
         },
-        breakpoints:{
-            767:{
-                centeredSlides: false,
-            }
-        }
       });
 </script>

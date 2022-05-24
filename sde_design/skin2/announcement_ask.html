@@ -1,6 +1,6 @@
 <!--@layout(/layout/basic/layout.html)-->
 <style>
-    .anno--container{margin-top: 130px;}
+    .anno--container{margin-top: 130px;margin-bottom:180px;}
     .public--wrap{width: 100%;max-width: 1400px;margin-left: auto;margin-right: auto;padding: 0 60px;margin-top: 60px;}
     .anno--uniform{display: flex;justify-content: flex-end;}
     .uniform--container{display: flex;color: #8b8b8b;}
@@ -9,12 +9,25 @@
     .uniform--gt{display: block;margin: 0 8px;}
 
     .anno--head{border-bottom: 1px solid #dbdbdb;width: 100%;}
-    .anno--title{margin-top: 64px;}
+    .anno--title{margin-top: 64px;line-height:1;}
     .anno--title-text1{font-size: 20px;letter-spacing: -0.3px;font-weight: 600;}
-    .anno--title-text2{margin-top: 24px;font-size: 48px;letter-spacing: -0.5px;font-weight: 600;}
-    .anno--list-wrap{display: flex;margin-top: 42px;}
-    .anno--list-wrap a{padding: 18px 0;margin-right: 40px;display: block;color: #8b8b8b;transform: translate(0,2px);font-weight: 600;}
+    .anno--title-text2{margin-top: 12px;font-size: 48px;letter-spacing: -0.5px;font-weight: 700;}
+    .anno--list-wrap{display: flex;margin-top: 36px;}
+    .anno--list-wrap a{padding: 18px 0;margin-right: 36px;display: block;color: #8b8b8b;transform: translate(0,2px);font-weight: 600;font-size:16px;}
     .anno--list-wrap a.on-here{border-bottom: 3px solid #000;color: #000000;}
+    .boardSearch_box{display: flex;}
+    /* .xans-board-search{padding: 0;} */
+    @media all and (max-width:767px){
+        .public--wrap{padding: 0 40px;}
+        .boardSearch_box{display: block;}
+        .boardSearch_box_box:nth-child(2){margin-top: 4px;}
+    }
+    @media all and (max-width:480px){
+        .public--wrap{padding: 0 20px;}
+        .anno--list-wrap a{margin-right: 24px;}
+        .anno--title-text1{font-size: 16px;}
+        .anno--title-text2{font-size: 24px;}
+    }
    
 </style>
 <div class="anno--container">
@@ -133,12 +146,14 @@
                 alt="다음 페이지" /></a>
     </div>
 
-    <div module="board_search_9">
+    <div module="board_search_9" class="public--wrap">
         <!--@css(/css/module/board/search.css)-->
         <fieldset class="boardSearch">
             <legend>게시물 검색</legend>
-            <p>{$form.consult} {$form.search_date} {$form.search_key} {$form.search} <a href="#none" class="btnEmFix"
-                    onclick="{$action_search}">찾기</a></p>
+            <div class="boardSearch_box">
+                <div class="boardSearch_box_box">{$form.consult} {$form.search_date} {$form.search_key}</div>
+                <div class="boardSearch_box_box">{$form.search} <a href="#none" class="btnEmFix" onclick="{$action_search}">찾기</a></div>
+            </div>
         </fieldset>
     </div>
 

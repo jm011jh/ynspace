@@ -1,29 +1,32 @@
 <!--@layout(/layout/basic/layout.html)-->
 <style>
-    .xans-product-menupackage.public--title-box{line-height: 1;width: 100%;max-width: 1400px;padding: 0 60px;margin:54px auto 0;}
-    .public--title-box p:nth-child(1){font-size: 20px;font-weight: 600;letter-spacing: -0.5px;}
-    .public--title-box p:nth-child(2){font-size: 48px;margin-top: 12px;font-weight: 600;letter-spacing: -1px;}
+    .xans-product-menupackage.public--title-box{line-height: 1;width: 100%;max-width: 1400px;padding: 0 60px;margin:64px auto 0;}
+    .public--title-box p:nth-child(1){font-size: 20px;font-weight: 600;letter-spacing: -1px;}
+    .public--title-box p:nth-child(2){font-size: 48px;margin-top: 14px;font-weight: 700;letter-spacing: -2px;}
 
 
     .uniform--container{padding:0 60px;;max-width:1400px;margin:auto;width: 100%;display: flex;justify-content: flex-end;padding-top:130px;}
     .uniform--container span{color: #8b8b8b;}
     .uniform--container span.uniform--now{color: #ff7f30;letter-spacing: -0.35px;}
-    .uniform--gt{margin: 0 4px 0 8px;}
+    .uniform--gt{margin: 0 8px;}
     .list--wrap{margin-top: 60px;max-width:1400px;padding: 0 60px;margin: auto;display:flex;justify-content: space-between;flex-wrap: wrap;}
     .list--list{width:calc(100%/4 - 60px/3);margin-bottom: 120px;}
     .list--list .prdImg a{display: block;width: 100%;padding-top:160%;background-size: cover;background-position: center center;background-repeat: no-repeat;}
     .wish{display: none;}
-    .company-name{font-size: 16px;font-weight: 600;margin-top: 20px;}
-    .product-title{font-size: 20px ;font-weight: 600;margin:18px 0;}
-    .product-date-number{font-size: 14px;color: #8b8b8b;font-weight: 500;}
-    .product-date{font-size: 14px ;color: #000;font-weight: 500;}
+    .company-name{font-size: 16px;font-weight: 600;margin-top: 20px;letter-spacing:-1px;}
+    .product-title{font-size: 20px ;font-weight: 700;margin:14px 0;letter-spacing:-1px;}
+    .product-date-number{font-size: 14px;color: #8b8b8b;font-weight: 600;letter-spacing:-0.5px;}
+    .product-date{font-size: 14px ;color: #000;font-weight: 700;}
     .xans-product-normalmenu{display:none;}
     .xans-product-menupackage{margin:0;}
 
     .list--class-box{width: 100%;border-bottom: 1px solid #dbdbdb;margin-bottom: 60px;}
-    .list--class-boxWrap{width: 100%;max-width: 1400px;padding: 0 60px;margin:42px auto 0px;display: flex;}
-    .list--class-boxWrap a{margin-right: 37px;padding: 18px 0;display: block;color: #8b8b8b;font-weight: 600;transform: translate(0,1.5px);}
-    .list--class-boxWrap a.on-here{border-bottom: 2px solid #000;color: #000000;}
+    .list--class-boxWrap{width: 100%;max-width: 1400px;padding: 0 60px;margin:36px auto 0px;display: flex;}
+    .list--class-boxWrap a{margin-right: 36px;padding: 18px 0;display: block;color: #8b8b8b;font-weight: 600;transform: translate(0,2px);font-size:16px;}
+    .list--class-boxWrap a.on-here{border-bottom: 3px solid #000;color: #000000;}
+    .list--empty-box{width: 100%;padding: 140px 0 200px;text-align: center;color: #8b8b8b;font-size: 16px;}
+    .ec-base-paginate{margin:0;}
+    #contents{margin-bottom:180px;}
     @media all and (max-width:767px){
         .uniform--container{padding: 0 40px;padding-top: 130px;}
         .xans-product-menupackage.public--title-box{padding: 0 40px;}
@@ -38,6 +41,8 @@
         .product-date-number{font-size: 13px;}
     }
     @media all and (max-width:480px){
+        .public--title-box p:nth-child(1){font-size: 16px;}
+        .public--title-box p:nth-child(2){font-size: 24px;}
         .uniform--container{padding: 0 20px;padding-top: 130px;}
         .xans-product-menupackage.public--title-box{padding: 0 20px;}
 
@@ -208,5 +213,18 @@ setTimeout(()=>{
     })
     $("#listWhere").text("#" + thisWhereBefore)
     $(".product-date-number").removeAttr("style");
+
+    $(".product-date-number").each(function(){
+        var thisText = $(this).text();
+        var replaceText = thisText.replaceAll("-",".")
+        $(this).text(replaceText);
+        console.log(replaceText)
+    })
+    var emptyLength = $(".list--list").length
+    var emptyBox = $("<div><p>공연이 없습니다.</p></div>")
+    emptyBox.addClass("list--empty-box")
+    if(emptyLength == 0){
+        $(".list--class-box").after(emptyBox)
+    }
 })
 </script>

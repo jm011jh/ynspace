@@ -1,164 +1,337 @@
-<!--@layout(/layout/basic/layout.html)-->
+<!--@layout(/layout/basic/main.html)-->
 <style>
-    *{margin: 0;padding: 0;box-sizing: border-box;}
-    .introduce--container{width: 100%;max-width: 1400px;margin: auto;padding-left:60px;padding-right:60px;}
-    @media all and (max-width:1024px){
-        .introduce--container{padding-left: 50px;padding-right: 50px;}
-    }
-    @media all and (max-width:1024px){
-        .introduce--container{padding-left: 40px;padding-right: 40px;}
-    }
-    @media all and (max-width:480px){
-        .introduce--container{padding-left: 20px;padding-right: 20px;}
-    }
-    .uniform--container{width: 100%;display: flex;justify-content: flex-end;padding-top:130px;}
-    .uniform--container span{color: #8b8b8b;}
-    .uniform--container span.uniform--now{color: #ff7f30;letter-spacing: -0.35px;}
-    .uniform--gt{margin: 0 4px 0 8px;}
-
-    .introduce--title{margin-top: 60px;}
-    .introduce--title-small{font-size: 20px;font-weight: 600;}
-    .introduce--title-big{margin-top: 24px;font-size: 48px;font-weight: 600;}
-    .introduce--swiper{margin-top: 60px;}
-    .introduce--swiper--bottom{position: relative;margin-top: 28px;}
-    .introduce--swiper .swiper-slide img{width: 100%;}
-    .introduce--swiper .swiper--button-wrap{position: absolute;width: 100%;top: 50%;left: 50%;transform: translate(-50%,-50%);}
-    .introduce--swiper .swiper-button-prev,
-    .introduce--swiper .swiper-button-next{opacity: 1;--swiper-theme-color:#000;}
-    .introduce--thumb-swiper{width:calc(100% - 100px);overflow: hidden;font-size: 16px;letter-spacing: -0.3px;line-height: 1.6;}
-
-    .introduce--exp{margin-top: 60px;background-color: #f2f2f2;border: 1px solid #cccccc;padding: 32px;}
-    .introduce--exp p{width: 100%;max-width: 1210px;word-break: keep-all;font-size: 16px;line-height: 1.6;}
-
-    .introduce--download{text-align: center;margin-top: 120px;margin-bottom: 180px;word-break: keep-all;}
-    .introduce--download-text1{font-weight: 700;font-size: 24px;}
-    .introduce--download-text2{font-size: 16px;margin-top: 24px;}
-    .introduce--download-button{margin-top: 40px;display: flex;justify-content: center;}
-    .introduce--download-button a{font-size: 16px;font-weight: 700;padding: 22px 44px;color: #fff;background-color: #000;}
-    .swiper-button-next:after, .swiper-button-prev:after{font-size: 24px;}
-    @media all and (max-width:480px){
-        .introduce--title-small{font-size: 16px;}
-        .introduce--title-big{font-size: 24px;}
-
-        .introduce--swiper{margin-top: 30px;}
-
-        .introduce--download{margin-top: 60px;margin-bottom: 90px;}
-        .introduce--exp{padding: 16px;}
-        .introduce--exp p,
-        .introduce--download-text2,
-        .introduce--download-button a,
-        .introduce--thumb-swiper{font-size: 14px;}
-        .introduce--download-text1{font-size: 18px;}
-
-        .introduce--thumb-swiper{width: calc(100% - 60px);}
-        .swiper-button-next{right: 0;}
-        .swiper-button-prev{left: 0;}
-        .swiper-button-next, .swiper-button-prev{width:20px;}
-        .swiper-button-next:after, .swiper-button-prev:after{font-size: 22px;}
-    }
+    @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+    .section5--banner-image{width: 100%;height: 100%;}
 </style>
-<div class="introduce--wrap">
-    <div class="uniform--container introduce--container">
-            <a href="/"><span>Home</span></a>
-            <span class="uniform--gt">&gt;</span>
-            <span class="uniform--now">시설안내</span>
+<div id="bgContainer" class="bg-container">
+    <div class="bg-container--wrap">
+        <div class="bg-container--list bg-container--list1 active"></div>
+        <div class="bg-container--list bg-container--list2"></div>
+        <div class="bg-container--list bg-container--list3"></div>
+        <div class="bg-container--list bg-container--list4"></div>
+        <div class="bg-container--list bg-container--list5"></div>
+        <div class="bg-container--list bg-container--list6"></div>
+        <div class="bg-container--list bg-container--list7"></div>
+        <div class="bg-container--list bg-container--list8"></div>
+        <div class="bg-container--list bg-container--list9"></div>
+        <div class="bg-container--list bg-container--list10"></div>
+        <div class="bg-container--list bg-container--list11"></div>
+        <div class="bg-container--list bg-container--list12"></div>
+        <div class="bg-container--list bg-container--list13"></div>
+        <div class="bg-container--list bg-container--list14"></div>
+        <div class="bg-container--list bg-container--list15"></div>
+        <div class="bg-container--list bg-container--list16"></div>
+        <div class="bg-container--list bg-container--list17"></div>
+        <div class="bg-container--list bg-container--list18"></div>
+        <div class="bg-container--list bg-container--list19"></div>
+        <div class="bg-container--list bg-container--list20"></div>
+        <div class="bg-container--list bg-container--list21"></div>
+        <div class="bg-container--list bg-container--list22"></div>
+        <div class="bg-container--list bg-container--list23"></div>
+        <div class="bg-container--list bg-container--list24"></div>
     </div>
-    <div class="introduce--title introduce--container">
-        <div class="introduce--title-small"><p>#시설안내</p></div>
-        <div class="introduce--title-big"><p>시설안내</p></div>
-    </div>
-    <div class="introduce--swiper introduce--container">
-        <div class="swiper mySwiper2">
-            <div class="swiper-wrapper">
-                <div class="swiper-slide"><img src="/web/easyweb/image/main_bg1.jpg" /></div>
-                <div class="swiper-slide"><img src="/web/easyweb/image/main_bg2.jpg" /></div>
-                <div class="swiper-slide"><img src="/web/easyweb/image/main_bg3.jpg" /></div>
-                <div class="swiper-slide"><img src="/web/easyweb/image/main_bg4.jpg" /></div>
-                <div class="swiper-slide"><img src="/web/easyweb/image/main_bg5.jpg" /></div>
-                <div class="swiper-slide"><img src="/web/easyweb/image/main_bg6.jpg" /></div>
-                <div class="swiper-slide"><img src="/web/easyweb/image/main_bg7.jpg" /></div>
-                <div class="swiper-slide"><img src="/web/easyweb/image/main_bg8.jpg" /></div>
-                <div class="swiper-slide"><img src="/web/easyweb/image/main_bg9.jpg" /></div>
-                <div class="swiper-slide"><img src="/web/easyweb/image/main_bg10.jpg" /></div>
-                <div class="swiper-slide"><img src="/web/easyweb/image/main_bg11.jpg" /></div>
-                <div class="swiper-slide"><img src="/web/easyweb/image/main_bg12.jpg" /></div>
-                <div class="swiper-slide"><img src="/web/easyweb/image/main_bg13.jpg" /></div>
-                <div class="swiper-slide"><img src="/web/easyweb/image/main_bg14.jpg" /></div>
-                <div class="swiper-slide"><img src="/web/easyweb/image/main_bg15.jpg" /></div>
-                <div class="swiper-slide"><img src="/web/easyweb/image/main_bg16.jpg" /></div>
-                <div class="swiper-slide"><img src="/web/easyweb/image/main_bg17.jpg" /></div>
-                <div class="swiper-slide"><img src="/web/easyweb/image/main_bg18.jpg" /></div>
-                <div class="swiper-slide"><img src="/web/easyweb/image/main_bg19.jpg" /></div>
-                <div class="swiper-slide"><img src="/web/easyweb/image/main_bg20.jpg" /></div>
-                <div class="swiper-slide"><img src="/web/easyweb/image/main_bg21.jpg" /></div>
-                <div class="swiper-slide"><img src="/web/easyweb/image/main_bg22.jpg" /></div>
-                <div class="swiper-slide"><img src="/web/easyweb/image/main_bg23.jpg" /></div>
-                <div class="swiper-slide"><img src="/web/easyweb/image/main_bg24.jpg" /></div>
+</div>
+<div class="main-container">
+    <div class="section1">
+        <div class="section1--contents">
+            <div id="s1textBox" class="section1--text w">
+                <p>연남스페이스</p>
+                <p>Yeonnam Space, a new space that you can feel with your whole body<br class="over480">It is located as a small theater at the center of Yeonnam-dong culture.</p>
             </div>
-        </div>
-        <div class="introduce--swiper--bottom">
-            <div thumbsSlider="" class="swiper introduce--thumb-swiper mySwiper">
-                <div class="swiper-wrapper swiper-thumb-wrapper">
+            <div id="s1slideBox" class="section1--slide w">
+                <div class="section1--slide-btn-wrap">
+                    <div id="s1slideLeftBtn" class="section1--slide-left section1--slide-button" role="button">
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <div id="s1slideRightBtn" class="section1--slide-right section1--slide-button" role="button">
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+                <div class="section1--slide-thumb-wrap">
+                    <div class="section1--slide-thumb-list section1--slide-thumb-list1 active"></div>
+                    <div class="section1--slide-thumb-list section1--slide-thumb-list2"></div>
+                    <div class="section1--slide-thumb-list section1--slide-thumb-list3"></div>
+                    <div class="section1--slide-thumb-list section1--slide-thumb-list4"></div>
+                    <div class="section1--slide-thumb-list section1--slide-thumb-list5"></div>
+                    <div class="section1--slide-thumb-list section1--slide-thumb-list6"></div>
+                    <div class="section1--slide-thumb-list section1--slide-thumb-list7"></div>
+                    <div class="section1--slide-thumb-list section1--slide-thumb-list8"></div>
+                    <div class="section1--slide-thumb-list section1--slide-thumb-list9"></div>
+                    <div class="section1--slide-thumb-list section1--slide-thumb-list10"></div>
+                    <div class="section1--slide-thumb-list section1--slide-thumb-list11"></div>
+                    <div class="section1--slide-thumb-list section1--slide-thumb-list12"></div>
+                    <div class="section1--slide-thumb-list section1--slide-thumb-list13"></div>
+                    <div class="section1--slide-thumb-list section1--slide-thumb-list14"></div>
+                    <div class="section1--slide-thumb-list section1--slide-thumb-list15"></div>
+                    <div class="section1--slide-thumb-list section1--slide-thumb-list16"></div>
+                    <div class="section1--slide-thumb-list section1--slide-thumb-list17"></div>
+                    <div class="section1--slide-thumb-list section1--slide-thumb-list18"></div>
+                    <div class="section1--slide-thumb-list section1--slide-thumb-list19"></div>
+                    <div class="section1--slide-thumb-list section1--slide-thumb-list20"></div>
+                    <div class="section1--slide-thumb-list section1--slide-thumb-list21"></div>
+                    <div class="section1--slide-thumb-list section1--slide-thumb-list22"></div>
+                    <div class="section1--slide-thumb-list section1--slide-thumb-list23"></div>
+                    <div class="section1--slide-thumb-list section1--slide-thumb-list24"></div>
                 </div>
             </div>
-            <div class="swiper--button-wrap">
-                <div class="swiper-button-prev"></div>
-                <div class="swiper-button-next"></div>
+        </div>
+    </div>
+    <div id="section2" class="section2">
+        <div class="section2--wrapper">
+            <div class="section2--container">
+                <div id="s2textBox" class="section2--text-wrap">
+                    <div class="section2--text-row section2--text-row1"><p>온몸으로</p></div>
+                    <div class="section2--text-row section2--text-row2">
+                        <p>느낄 수 있는</p>
+                        <div class="section2--small-text">
+                            <p class=" section2--small">연남스페이스는 연남동 문화 중심의<br>소극장으로 자리잡고 있습니다.</p>
+                        </div>
+                    </div>
+                    <div class="section2--text-row section2--text-row3">
+                        <p>새로운 공간</p>
+                        <p class="section2--small section2--small-mob">연남스페이스는 연남동 문화 중심의<br>소극장으로 자리잡고 있습니다.</p>
+                    </div>
+                </div>
+                <div id="s2circleBox" class="section2--circle-wrap">
+                    <div id="s2circleText" class="section2--circle-text"><img src="/web/easyweb/image/main_s2_circle_text.png" alt=""></div>
+                    <div class="section2--circle-arrow">
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
-    <div class="introduce--container">
-        <div class="introduce--exp">
-            <p>좌석수는 1층과 1층 계단석 약 130석과 2층 라운지 석 20명 총 150명의 좌석이 준비되어있고 스텐딩은 200~250명, 2층 라운지석은 대관 사용자 분들이 특별하게 사용하실 수 있습니다. 기본적인 음향 시설과 조명시설, 4K 팬틸트 카메라로 라이브스트리밍, 8000안시  레이져 프로젝터로 스크린을 사용하는 모든 것이 포함되어 있습니다.</p>
+
+    
+    <div id="section3" class="section3">
+<div class="section3--bg"><span></span><span></span><span></span></div>
+<div class="section3--wrap">
+    <div class="section3--container">
+        <div class="section3--contents">
+            <div class="section3--text">
+                <p>#공연정보</p>
+                <p class="font2">Performance<br>information</p>
+                <p>연남스페이스에서 진행하고있는<br>공연정보입니다.</p>
+                <div class="section3--view-detail">
+                    <a href="">
+                        <div class="section3--view-detail-arrow"><span></span><span></span></div>
+                        <div class="section3--view-detail-text">
+                            <a href="/product/list.html?cate_no=28"><p class="font2">View detail</p></a>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="swiper section3--swiper" module="product_listmain_1">
+                        <!--
+        $count = 5
+        $basket_result = /product/add_basket.html
+        $basket_option = /product/basket_option.html
+    -->
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide" id="anchorBoxId_{$product_no}">
+                        <a href="/product/detail.html{$param}">
+                            <div class="slide-image" style="background-image: url({$image_medium});" id="{$image_medium_id}"></div>
+                            <div class="slide-title">
+                                <p>{$product_name}</p>
+                            </div>
+                            <div class="slide-date">
+                                <p></p>
+                                <p>일시 :&nbsp;</p>
+                                <p>{$expiration_date}</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="swiper-slide" id="anchorBoxId_{$product_no}">
+                        <a href="/product/detail.html{$param}">
+                            <div class="slide-image" style="background-image: url({$image_medium});" id="{$image_medium_id}"></div>
+                            <div class="slide-title">
+                                <p>{$product_name}</p>
+                            </div>
+                            <div class="slide-date">
+                                <p></p>
+                                <p>일시 :&nbsp;</p>
+                                <p>{$expiration_date}</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="swiper-scrollbar"></div>
+            </div>
         </div>
     </div>
-    <div class="introduce--container">
-        <div class="introduce--download">
-            <div class="introduce--download-text1"><p>좌석 배치도</p></div>
-            <div class="introduce--download-text2"><p>다운로드 버튼을 클릭하시면 좌석 배치도를 확인 하실 수 있습니다.</p></div>
-            <div class="introduce--download-button">
-                <a href="/web/easyweb/file/"><p>좌석안내 다운로드</p></a>
+</div>
+</div>
+    
+    
+    <div class="section4">
+        <div class="section4--bg"><div class="section4--bg-black"></div></div>
+        <div class="section4--wrap">
+            <div class="section4--container">
+                <div class="section4-text">
+                    <p>#연남스페이스의 멋진 내부공간</p>
+                    <p class="font2">Matterport VR</p>
+                </div>
+                <div class="section4--matterport">
+                    <a href="https://my.matterport.com/show/?m=wUi75jySrVo" target="blank"><img src="/web/easyweb/image/main_s4_matterport.png" alt=""><div class="section4--matterport-text">
+                            <p class="font2">Play</p>
+                            <span class="line"></span>
+                            <div class="section4--matterport-play">
+                                <span class="section4--matterport-play-border"></span>
+                                <div class="playIcon-box"><span></span></div>
+                            </div>
+                    </div></a>
+                </div>
+            </div>
+        </div>
+    </div>
+   
+
+
+
+
+
+<div class="section5">
+<div class="section5--wrap">
+    <div class="section5--container">
+        <div class="section5--banner">
+            <div class="section5--banner-image" module="board_list_8" style="background-image:url({$img_src});background-size:cover;background-position: center center;background-repeat: no-repeat;">
+                <img src="{$img_src}" onerror="this.src='http://img.echosting.cafe24.com/skin/base_ko_KR/board/@img_gallery.gif'" alt="" />
+                <!--
+                $count = 1
+                $login_page_url = /member/login.html
+                $deny_access_url = /index.html
+                -->
+            </div>
+            <div class="section5--banner-button">
+                <a href="http://skin-skin2.yeonnamspace.cafe24.com/front/php/b/board_list.php?board_no=8&is_pcver=T">
+                    <p>팝업존</p>
+                    <div class="section5--banner-button-plus">
+                        <span></span>
+                        <span></span>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="section5--news">
+            <div class="section5--news-head">
+                <p class="font2">News</p>
+                <a href="">
+                    <div class="w">
+                        <p>View More</p>
+                    </div>
+                    <div class="w">
+                        <div class="plus-icon"><span></span><span></span></div>
+                    </div>
+                </a>
+            </div>
+            <div class="section5--news-body" module="board_list_1">
+				<!--
+                $count = 5
+                $main_list = yes
+                $subject_cut = 25
+                $main_list_reply_view = no
+                 -->
+                <div class="section5--news-list">
+                    <a href="{$link_board_detail}">
+                        <div class="section5--news-info">
+                            <div class="section5--news-num">
+                                <p class="section5--news-date">{$write_date}</p>
+                                <p class="section5--news-order"></p>
+                            </div>
+                            <div class="section5--news-text">
+                                <div class="section5--news-title">
+                                    <div class="section5--news-notice">
+                                        <p>공지</p>
+                                    </div>
+                                    <div class="section5--news-notice-title">
+                                        <p class="subject_pc">{$subject}</p>
+                                        <p class="subject_mob"></p>
+                                    </div>
+                                </div>
+                                <div class="section5--news-exp">
+                                    <p>공지사항내용간략</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="section5--news-circle"><span></span><span></span></div>
+                    </a>
+                </div>
+                <div class="section5--news-list">
+                    <a href="{$link_board_detail}">
+                        <div class="section5--news-info">
+                            <div class="section5--news-num">
+                                <p class="section5--news-date">{$write_date}</p>
+                                <p class="section5--news-order"></p>
+                            </div>
+                            <div class="section5--news-text">
+                                <div class="section5--news-title">
+                                    <div class="section5--news-notice">
+                                        <p>공지</p>
+                                    </div>
+                                    <div class="section5--news-notice-title">
+                                        <p class="subject_pc">{$subject}</p>
+                                        <p class="subject_mob"></p>
+                                    </div>
+                                </div>
+                                <div class="section5--news-exp">
+                                    <p>공지사항내용간략</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="section5--news-circle"><span></span><span></span></div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+    <div class="section6">
+        <div class="section6--wrap">
+            <div class="section6--container">
+                <div class="section6--text">
+                    <p>연남스페이스는 연남동 문화 중심의 <br>소극장으로 자리잡고 있습니다.</p>
+                </div>
+                <div class="section6--download">
+                    <a href="https://drive.google.com/file/d/1-1ex8fNOoKVq70h25xzYcG6jd71SsQgS/view?usp=sharing" target="blank">
+                        <div class="section6--download-icon"><img src="/web/easyweb/image/icon_download.png" alt=""></div>
+                        <div class="section6--download-text"><p>대관신청서 다운로드</p></div>
+                    </a>
+                </div>
             </div>
         </div>
     </div>
 </div>
 <script>
 setTimeout(()=>{
-	$(".header--wrap").removeClass("white")
-	$(".header--wrap").addClass("black")
-
-    var swiper = new Swiper(".mySwiper", {
-        spaceBetween: 10,
-        slidesPerView: 2.5,
-        freeMode: true,
-        watchSlidesProgress: true,
-        breakpoints:{
-            480:{
-                slidesPerView:3.5,
-            },
-            768:{
-                slidesPerView:4.5,
-            },
-            1024:{
-                slidesPerView:5.5,
-            },
-        }
-      });
-      var swiper2 = new Swiper(".mySwiper2", {
-        spaceBetween: 10,
-        centeredSlides: true,
-        navigation: {
-          nextEl: ".swiper-button-next",
-          prevEl: ".swiper-button-prev",
-        },
-        thumbs: {
-          swiper: swiper,
-        },
-      });
-
-    $(".mySwiper2 .swiper-wrapper .swiper-slide").each(function(){
-        var thisClone = $(this).clone();
-        thisClone.appendTo(".swiper-thumb-wrapper")
-    })
+$(".header--wrap").removeClass("black")
+$(".header--wrap").addClass("white")
+// $(".section5--news-list").each(function(){
+//     var thisIdx = String($(this).index()+1);
+//     insertIdx = "0" +thisIdx;
+//     $(this).find(".section5--news-order").text(insertIdx)
+// })
+$(".section5--news-date").each(function(){
+    var thisText = $(this).text();
+    var cutText = thisText.substr(0,10);
+    var replaceText = cutText.replaceAll("-",".")
+    var finalText = replaceText.substr(0,7)
+    var indexText = replaceText.substr(8,2)
+    console.log(indexText)
+    $(this).text(finalText)
+    $(this).closest(".section5--news-num").find(".section5--news-order").text(indexText)
+    
+})
+$(".slide-title span").removeAttr("style")
+$(".slide-date p").eq(2).each(function(){
+    var thisText = $(this).text();
+    var replaceText = thisText.replaceAll("-",".")
+    var replaceText = thisText.replaceAll("~"," ~ ")
+    $(this).text(replaceText)
+    console.log(replaceText)
+})
 })
 </script>
